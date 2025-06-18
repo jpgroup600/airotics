@@ -1,40 +1,18 @@
 import { Arrow } from "@/components/Layout/Header/Svgs";
 import { List } from "./list";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-type Props = List & {};
+type Props = List & { id: number };
 
-const Card: React.FC<Props> = ({ description, heading, techs, videoSrc }) => {
-  const container = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 800px)", () => {
-        const animation = gsap
-          .timeline()
-          .to(".main", { scale: 0.8, opacity: 0 });
-
-        ScrollTrigger.create({
-          trigger: container.current,
-          scrub: 1,
-          pin: true,
-          pinSpacing: false,
-          animation,
-        });
-      });
-    },
-    { scope: container },
-  );
-
+const Card: React.FC<Props> = ({
+  description,
+  heading,
+  techs,
+  videoSrc,
+  id,
+}) => {
   return (
     <div
-      ref={container}
-      className="lg:flex lg:h-screen lg:items-center lg:justify-center"
+      className={`card-${id} lg:absolute lg:inset-0 lg:flex lg:h-screen lg:items-center lg:justify-center`}
     >
       <div className="main p-7-percent flex flex-col-reverse rounded-2xl bg-white lg:flex-row lg:gap-8 lg:rounded-[60px] lg:p-16">
         <div className="flex flex-col gap-4 lg:w-[60%] lg:gap-6">
