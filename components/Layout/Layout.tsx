@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -20,11 +21,10 @@ const arpDisplay = localFont({
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <main
-      className={`bg-background font-sans ${montreal.variable} ${arpDisplay.variable}`}
-    >
+    <main className={`font-sans ${montreal.variable} ${arpDisplay.variable}`}>
       <Header />
       {children}
+      <Footer />
     </main>
   );
 };
