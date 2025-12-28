@@ -30,3 +30,26 @@
     background-position: 0;
   }
 }
+
+.cursor-trail-img {
+  position: absolute;
+  width: 260px;
+  height: 145px;
+  transform: translate(-50%, -50%) scale(1);
+  animation: trailFade 0.1s ease-in forwards;
+  animation-delay: 0.5s;
+  object-fit: cover;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
