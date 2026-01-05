@@ -8,7 +8,7 @@ const ContactPage = () => {
   return (
     <>
       <Head>
-        <title>Kota Application | Contact</title>
+        <title>Airotics Application | Contact</title>
       </Head>
       <Hero />
       <Form />

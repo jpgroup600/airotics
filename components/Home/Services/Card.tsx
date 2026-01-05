@@ -32,12 +32,12 @@ const Card: React.FC<Props> = ({
             })}
           </div>
           <p className="text-xl">{description}</p>
-          <button className="flex w-fit items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-2 lg:px-6 lg:py-3 lg:text-lg">
+          {/* <button className="flex w-fit items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-2 lg:px-6 lg:py-3 lg:text-lg">
             Find out more
             <span className="h-3 w-3.5 lg:h-4 lg:w-[18px]">
               <Arrow />
             </span>
-          </button>
+          </button> */}
         </div>
         <div className="lg:flex lg:w-[40%] lg:justify-stretch">
           <video

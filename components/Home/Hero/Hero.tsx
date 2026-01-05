@@ -30,10 +30,10 @@ const Hero = () => {
       className="max-w-9xl 2xl:max-w-10xl px-7-percent 2xl:px-7.5-percent mx-auto grid min-h-screen w-full grid-cols-12 content-end gap-x-3 lg:content-center"
     >
       <h1 className="font-display col-span-12 mt-26 h-fit overflow-hidden text-6xl text-black lg:col-start-1 lg:col-end-12 lg:mt-0 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
-        <span className="heading inline-block translate-y-full">innovate</span>
+        <span className="heading inline-block translate-y-full">push</span>
       </h1>
       <h1 className="font-display col-span-12 h-fit overflow-hidden text-6xl text-black lg:col-start-3 lg:col-end-12 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
-        <span className="heading inline-block translate-y-full">beyond</span>
+        <span className="heading inline-block translate-y-full">past</span>
       </h1>
       <h1 className="font-display col-span-12 h-fit overflow-hidden text-6xl text-black lg:col-start-1 lg:col-end-9 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
         <span className="heading inline-block translate-y-full">limits</span>

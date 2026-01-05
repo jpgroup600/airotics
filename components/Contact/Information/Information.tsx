@@ -9,7 +9,7 @@ const Information = () => {
             <div className="flex flex-col">
               <p className="text-fs-44 leading-[150%]">London</p>
               <ul className="lg:text-xl">
-                <li>KOTA</li>
+                <li>Airotics</li>
                 <li>1-5 Clerkenwell Rd</li>
                 <li>London</li>
                 <li>EC1M 5PA</li>
@@ -18,7 +18,7 @@ const Information = () => {
             <div className="flex flex-col">
               <p className="text-fs-44 leading-[150%]">New York</p>
               <ul className="lg:text-xl">
-                <li>KOTA</li>
+                <li>Airotics</li>
                 <li>477 Madison Ave</li>
                 <li>Midtown Manhattan</li>
                 <li>6th Floor, NY 10022</li>
@@ -38,19 +38,19 @@ const Information = () => {
             <div className="flex flex-col">
               <p className="text-lg text-[#7b7b7b]">General</p>
               <Link className="text-fs-44" target="_blank" href="mailto:">
-                hello@kota.co.uk
+                hello@Airotics.co.uk
               </Link>
             </div>
             <div className="flex flex-col">
               <p className="text-lg text-[#7b7b7b]">New business</p>
               <Link className="text-fs-44" target="_blank" href="mailto:">
-                newbiz@kota.co.uk
+                newbiz@Airotics.co.uk
               </Link>
             </div>
             <div className="flex flex-col">
               <p className="text-lg text-[#7b7b7b]">Work with us</p>
               <Link className="text-fs-44" target="_blank" href="mailto:">
-                careers@kota.co.uk
+                careers@Airotics.co.uk
               </Link>
             </div>
           </div>
