@@ -79,8 +79,16 @@ const Header = () => {
         </p>
       </div>
       <div className="flex items-center justify-center gap-6">
+        
         <button className="hidden h-[52px] cursor-pointer items-center justify-center gap-4 rounded-full bg-black px-5 text-lg text-white lg:flex">
-          Hire us{" "}
+        <Link
+            onClick={handleMenuDisable}
+            
+            href="/contact"
+          >
+         Hire us{" "}
+
+         </Link>
           <span className="h-4 w-[18px]">
             <Arrow color="#ffffff" />
           </span>
@@ -151,7 +159,13 @@ const Header = () => {
           </Link>
         </div>
         <button className="menu-inside-btn mt-7 flex scale-0 cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-3.5">
+        <Link
+            onClick={handleMenuDisable}
+           
+            href="/contact"
+          >
           Start your projects{" "}
+          </Link>
           <span className="h-3 w-3.5">
             <Arrow />
           </span>
