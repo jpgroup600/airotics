@@ -13,11 +13,19 @@ const AgencyPage = () => {
       <Head>
         <title>Kota Application | Agency</title>
       </Head>
+      <video
+        className="fixed inset-0 -z-10 h-full w-full object-cover"
+        src="/home/background.mp4"
+        loop
+        muted
+        playsInline
+        autoPlay
+      />
       <Hero />
       <Mission />
       <Approach />
       <Partners />
-      <Award />
+      {/* <Award /> */}
       <Team />
       <div className="bg-black lg:pt-[5vw]">
         <Interested />

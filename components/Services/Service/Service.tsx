@@ -60,12 +60,12 @@ const Service: React.FC<Props> = ({
               <p className="lg:text-fs-24 mb-8 max-w-[33ch] text-base leading-[133%]">
                 {elem.description}
               </p>
-              <button className="flex w-fit items-center rounded-full border-2 border-black px-6 py-2 tracking-tight">
+              {/* <button className="flex w-fit items-center rounded-full border-2 border-black px-6 py-2 tracking-tight">
                 Find out more
                 <span className="ml-4 w-4">
                   <Arrow />
                 </span>
-              </button>
+              </button> */}
             </div>
             <Image
               className={`order-1 col-span-12 mb-6 aspect-square lg:col-span-6 lg:mb-0 ${

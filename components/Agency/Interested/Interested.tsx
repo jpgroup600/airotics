@@ -15,7 +15,7 @@ const Interested = () => {
               className="underline underline-offset-6"
               href="mailto:hello@kota.co.uk"
             >
-              hello@kota.co.uk
+              hello@airotics.com
             </Link>
           </h2>
           <p className="text-center text-base lg:text-left lg:text-lg">

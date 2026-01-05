@@ -13,19 +13,19 @@ const Extro = () => {
         src="/home/blob.mp4"
       ></video>
       <p className="z-10 text-center text-xl text-white uppercase">
-        Celebrating 15 years
+        Celebrating 5 years
       </p>
       <Marquee className="my-10 overflow-hidden" autoFill>
         <h1 className="mx-5 text-5xl leading-none text-white uppercase lg:text-[9.375rem]">
           techverse
         </h1>
       </Marquee>
-      <button className="z-10 mx-auto flex h-[52px] w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-5 text-lg text-white">
+      {/* <button className="z-10 mx-auto flex h-[52px] w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-5 text-lg text-white">
         Explore{" "}
         <span className="h-4 w-[18px]">
           <Arrow color="#ffffff" />
         </span>
-      </button>
+      </button> */}
     </section>
   );
 };
