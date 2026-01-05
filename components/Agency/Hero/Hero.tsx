@@ -52,7 +52,7 @@ const Hero = () => {
     >
       <div className="relative z-30 flex h-[90%] flex-col justify-center lg:h-[80%]">
         <h1 className="text-fs-100 max-w-[12ch] leading-[0.95]">
-          Proudly signing every piece.
+          Committed to excellence in every project.
         </h1>
       </div>
 

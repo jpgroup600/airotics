@@ -20,20 +20,20 @@ const Approach = () => {
       />
       <div className="lg:text-fs-24 col-span-5 col-start-8 mt-[5vw] flex flex-col justify-center gap-4 lg:leading-[125%]">
         <p>
-          We&apos;re not just coders who take instructions - we&apos;re artists
-          who take pride in being bold and draw inspiration from the wider
-          creative world of music, film and the arts.
+          We&apos;re not just developers who follow orders - we&apos;re innovators
+          who take pride in being visionary and draw inspiration from the broader
+          technology landscape of AI, cloud computing and emerging platforms.
         </p>
 
         <p>
-          You&apos;ll never see us play it safe, and we especially like
-          partnering with clients who are up for making digital waves.
+          You&apos;ll never see us take the easy route, and we especially like
+          partnering with clients who are ready for making technological breakthroughs.
         </p>
 
         <p>
-          Sustainability is very close to our hearts, too. If your brand makes a
-          positive impact on the environment, we&apos;d relish in making it even
-          bigger.
+          Innovation is very close to our hearts, too. If your company drives
+          positive change in the industry, we&apos;d love to help make it even
+          greater.
         </p>
       </div>
     </section>

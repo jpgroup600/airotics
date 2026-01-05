@@ -7,30 +7,30 @@ export type List = {
 
 export const lists: List[] = [
   {
-    heading: "Web design & development",
+    heading: "Technology & innovation",
     techs: [
-      "Creative web design",
-      "Web development",
-      "Copywriting",
-      "E-commerce",
-      "Wordpress",
+      "AI solutions",
+      "Cloud architecture",
+      "Data analytics",
+      "IoT integration",
+      "Blockchain",
     ],
     description:
-      "Crafting digital experiences where beauty meets ROI, turning heads and unlocking revenue potential with every click.",
+      "Building intelligent systems where innovation meets efficiency, driving growth and unlocking competitive advantage with every solution.",
     videoSrc: "/home/services/0.mp4",
   },
   {
-    heading: "Branding",
-    techs: ["Brand strategy", "Tone of voice", "Visual identity"],
+    heading: "Digital transformation",
+    techs: ["Strategy consulting", "Process automation", "System integration"],
     description:
-      "t all starts with your brand. We use sound strategic thinking to create or elevate your brand identity, from your visuals to your voice.",
+      "It all begins with transformation. We use strategic insights to modernize or revolutionize your operations, from your infrastructure to your workflows.",
     videoSrc: "/home/services/1.mp4",
   },
   {
-    heading: "Digital Marketing",
-    techs: ["Motion graphic", "Creative campaigns", "Marketing support"],
+    heading: "Enterprise solutions",
+    techs: ["Platform development", "Custom software", "Technical support"],
     description:
-      "Delivering eye-catching motion graphics and campaigns that earn attention, spark emotion and increase conversions.",
+      "Creating powerful enterprise platforms and applications that capture attention, inspire confidence and accelerate business growth.",
     videoSrc: "/home/services/2.mp4",
   },
 ];

@@ -29,8 +29,8 @@ const Information = () => {
           <p className="lg:text-lg">
             Have a quick question you need answering?
             <br />
-            Check out - FAQ&aspo;s :{" "}
-            <span className="underline">Working with KOTA</span>
+            Check out - FAQ&apos;s :{" "}
+            <span className="underline">Working with us</span>
           </p>
         </div>
         <div className="col-span-4 col-start-9 flex flex-col gap-6 pt-6 text-white lg:gap-12 lg:pt-0">

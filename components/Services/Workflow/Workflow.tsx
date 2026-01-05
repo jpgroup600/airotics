@@ -41,9 +41,9 @@ const Workflow = () => {
       className="mx-auto mb-[4.5rem] flex min-h-screen max-w-[calc(1400px+15%)] flex-col justify-center gap-[3.125rem] py-[5vw] lg:overflow-x-hidden lg:px-[7.5%]"
     >
       <div className="flex flex-col gap-6 px-[7.5%]">
-        <h1 className="text-fs-60 leading-none">Website workflow.</h1>
+        <h1 className="text-fs-60 leading-none">Project workflow.</h1>
         <p className="text-fs-24 leading-[125%]">
-          Here’s an overview of a medium-sized, 14 week website project.
+          Here's an overview of a medium-sized, 16 week technology project.
         </p>
       </div>
 

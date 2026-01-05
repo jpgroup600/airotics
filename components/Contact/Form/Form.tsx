@@ -3,13 +3,13 @@ import { Arrow } from "@/components/Layout/Header/Svgs";
 
 const Form = () => {
   const services = [
-    "A new website",
-    "Branding",
-    "Motion graphics",
-    "E-Commerce",
-    "Development",
-    "On-going  support",
-    "App from scratch",
+    "AI solutions",
+    "Cloud architecture",
+    "Data analytics",
+    "Enterprise systems",
+    "Platform development",
+    "Ongoing support",
+    "Custom integration",
   ];
 
   return (
@@ -82,13 +82,13 @@ const Form = () => {
             <label className="peer flex items-center gap-3">
               <input type="checkbox" className="peer hidden" />
               <span className="h-[18px] w-[18px] min-w-[18px] rounded-full border border-black bg-white peer-checked:bg-black"></span>
-              <p>I&apos;m happy to receive a monthly newsletter from KOTA</p>
+              <p>I&apos;m happy to receive a monthly newsletter from us</p>
             </label>
             <label className="peer flex items-center gap-3">
               <input type="checkbox" className="peer hidden" />
               <span className="h-[18px] w-[18px] min-w-[18px] rounded-full border border-black bg-white peer-checked:bg-black"></span>
               <p>
-                I understand that KOTA will securely hold my data in accordance
+                I understand that we will securely hold my data in accordance
                 with their privacy policy.
               </p>
             </label>

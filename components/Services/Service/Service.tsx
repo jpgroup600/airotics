@@ -1,39 +1,50 @@
 import { Arrow } from "@/components/Layout/Header/Svgs";
 import Image from "next/image";
 
-const Service = () => {
-  const services = [
+type ServiceItem = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+type Props = {
+  services?: ServiceItem[];
+};
+
+const Service: React.FC<Props> = ({
+  services = [
     {
-      title: "Creative Web Design",
+      title: "AI Solutions",
       description:
-        "Drawing inspiration from different mediums, trends and audiences, we craft thoughtful, creative websites that help brands put their best digital foot forwards.",
+        "Leveraging cutting-edge artificial intelligence technologies and innovative frameworks, we develop strategic solutions that transform businesses and drive meaningful outcomes.",
       image: "/services/services/creative-web-design.webp",
     },
     {
-      title: "Web Development",
+      title: "Cloud Architecture",
       description:
-        "Powered by front-end technologies and forward-thinking concepts, we make animated and interactive elements that enhance your website without slowing it down.",
+        "Built with advanced cloud platforms and forward-thinking infrastructure, we create scalable and resilient systems that enhance your operations without compromising performance.",
       image: "/services/services/web-dev.webp",
     },
     {
-      title: "Copywriting",
+      title: "Data Analytics",
       description:
-        "We craft purposeful copy that packs a punch - not only telling your story, but selling your brand.",
+        "We produce intelligent insights that deliver impact - not just analyzing your data, but unlocking your potential.",
       image: "/services/services/copywriting.webp",
     },
     {
-      title: "E-Commerce",
+      title: "Enterprise Systems",
       description:
-        "Use design and optimisation to your brand's advantage, turning casual visitors into committed fans.",
+        "Use technology and optimization to your company's advantage, turning complex challenges into streamlined solutions.",
       image: "/services/services/e-commerce.webp",
     },
     {
-      title: "WordPress",
+      title: "Platform Integration",
       description:
-        "Tailor-made WordPress websites that capture hearts, minds and wallets.",
+        "Bespoke integration solutions that connect systems, streamline workflows and maximize efficiency.",
       image: "/services/services/wordpress.webp",
     },
-  ];
+  ],
+}) => {
 
   return (
     <section className="mx-auto mb-[4.5rem] flex max-w-[calc(1400px+15%)] flex-col gap-[3.125rem] px-[7.5%] py-[5vw] lg:mb-[10rem] 2xl:max-w-[1800px+15%]">

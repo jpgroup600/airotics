@@ -75,7 +75,7 @@ const Header = () => {
           className="relative h-[52px] w-[52px] border-4 border-black bg-white lg:h-[60px] lg:w-[60px] lg:bg-transparent"
         ></Link>
         <p className="hidden text-xs uppercase lg:block">
-          Celebrating 12 years : 2013 - 2025
+        Celebrating 5 years  : 2020 - 2025
         </p>
       </div>
       <div className="flex items-center justify-center gap-6">
@@ -116,23 +116,30 @@ const Header = () => {
             <Link
               onClick={handleMenuDisable}
               className="font-light"
-              href="/services/web-design-and-development"
+              href="/services/web-and-app"
             >
-              Web design & development
+              Web and app
             </Link>
             <Link
               onClick={handleMenuDisable}
               className="font-light"
-              href="/services/branding"
+              href="/services/ai"
             >
-              Branding
+              AI
+            </Link>
+            <Link
+              onClick={handleMenuDisable}
+              className="font-light"
+              href="/services/blockchain"
+            >
+              Blockchain
             </Link>
             <Link
               onClick={handleMenuDisable}
               className="mb-2 font-light"
-              href="/services/digital-marketing"
+              href="/services/marketing"
             >
-              Digital Marketing
+              Marketing
             </Link>
           </div>
           <Link

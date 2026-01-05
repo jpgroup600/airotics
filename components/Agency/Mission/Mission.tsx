@@ -16,14 +16,14 @@ const Mission = () => {
           height={500}
         />
         <h3 className="lg:text-fs-60 order-3 mt-[5vw] text-[2rem] leading-none -tracking-wider lg:col-span-6">
-          To make the digital world more beautiful, thoughtful & impactful.
+          To make the technology landscape more intelligent, strategic & transformative.
         </h3>
         <p className="lg:text-fs-24 order-4 mt-[5vw] lg:col-span-5 lg:col-start-8 lg:leading-none">
-          Every pixel matters to us because we know it matters to our clients.
-          We understand that great creativity is not simply about big ideas;
-          it’s also about the smallest details. Our focus on the minutiae is not
-          just an obsession, it’s a reflection of our commitment to providing
-          the highest quality service, and we’re really proud of that.
+          Every line of code matters to us because we know it matters to our clients.
+          We understand that great innovation is not simply about big concepts;
+          it's also about the smallest optimizations. Our focus on the details is not
+          just an obsession, it's a reflection of our commitment to providing
+          the highest quality service, and we're really proud of that.
         </p>
       </section>
       <div className="relative h-fit w-full">

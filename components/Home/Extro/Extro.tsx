@@ -13,11 +13,11 @@ const Extro = () => {
         src="/home/blob.mp4"
       ></video>
       <p className="z-10 text-center text-xl text-white uppercase">
-        Celebrating 12 years
+        Celebrating 15 years
       </p>
       <Marquee className="my-10 overflow-hidden" autoFill>
         <h1 className="mx-5 text-5xl leading-none text-white uppercase lg:text-[9.375rem]">
-          kotaverse
+          techverse
         </h1>
       </Marquee>
       <button className="z-10 mx-auto flex h-[52px] w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-5 text-lg text-white">
