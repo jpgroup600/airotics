@@ -10,6 +10,14 @@ const ContactPage = () => {
       <Head>
         <title>Airotics Application | Contact</title>
       </Head>
+      <video
+        className="fixed inset-0 -z-10 h-full w-full object-cover"
+        src="/home/background.mp4"
+        loop
+        muted
+        playsInline
+        autoPlay
+      />
       <Hero />
       <Form />
       <Information />
