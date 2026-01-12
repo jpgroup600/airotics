@@ -33,12 +33,6 @@ const BlockchainPage = () => {
         "Use blockchain technology and innovation to your advantage, turning digital assets into valuable opportunities.",
       image: "/services/services/e-commerce.webp",
     },
-    {
-      title: "Cryptocurrency Integration",
-      description:
-        "Bespoke blockchain integration solutions that connect traditional systems with decentralized networks and maximize potential.",
-      image: "/services/services/wordpress.webp",
-    },
   ];
 
   return (
@@ -66,7 +60,6 @@ const BlockchainPage = () => {
             "Smart contract solutions",
             "DeFi platforms",
             "NFT marketplaces",
-            "Cryptocurrency integration",
           ]}
         />
         <Intro
