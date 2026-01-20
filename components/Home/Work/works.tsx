@@ -29,7 +29,7 @@ export const works: Work[] = [
     subheading: "The End of 'Good Enough'",
     description:
       "Why just build a website when you can engineer a digital domain? We craft high-impact frontends that annihilate the competition and convert users with uncompromising design and speed.",
-    imgSrc: "/home/work/tech-main-1.jpg",
+    imgSrc: "/home/work/tech-main-1.png",
     marqueeColor: "#ffffff",
     gradient: { to: "#7427ff", from: "#002aff" },
     details: [
@@ -37,7 +37,7 @@ export const works: Work[] = [
         heading: "Sprite",
         description:
           "",
-        imgSrc: "/home/work/tech-detail-1-1.jpg",
+        imgSrc: "/home/work/tech-detail-1-1.png",
         isPlayActive: true,
         videoSrc: "/work/video/sprite.mp4",
       },
@@ -45,7 +45,7 @@ export const works: Work[] = [
         heading: "Addidas",
         description:
           "",
-        imgSrc: "/home/work/tech-detail-1-2.jpg",
+        imgSrc: "/home/work/tech-detail-1-2.png",
         isPlayActive: true,
         videoSrc: "/work/video/addidas.mp4",
       },
@@ -53,7 +53,7 @@ export const works: Work[] = [
         heading: "Lotte Castle",
         description:
           "",
-        imgSrc: "/home/work/tech-detail-1-3.jpg",
+        imgSrc: "/home/work/tech-detail-1-3.png",
         isPlayActive: true,
         videoSrc: "/work/video/lotte.mp4",
       },
@@ -61,7 +61,7 @@ export const works: Work[] = [
         heading: "Cloud Castle",
         description:
           "",
-        imgSrc: "/home/work/tech-detail-1-4.jpg",
+        imgSrc: "/home/work/tech-detail-1-4.png",
         isPlayActive: true,
         videoSrc: "/work/video/cloudcastle.mp4",
       },
@@ -72,14 +72,14 @@ export const works: Work[] = [
     subheading: "Creating the Future Domain",
     description:
       "We master the future stack. Blending AI's intelligence with Blockchain's integrity, we deliver the next generation of verifiable, self-optimizing platforms.",
-    imgSrc: "/home/work/new-normal-main-1.jpg",
+    imgSrc: "/home/work/new-normal-main-1.png",
     marqueeColor: "#000000",
     gradient: { to: "#d6fe51", from: "#68d840" },
     details: [
       {
         heading: "Dron Link",
         description: "",
-        imgSrc: "/home/work/new-normal-detail-1-1.jpg",
+        imgSrc: "/home/work/new-normal-detail-1-1.png",
         isPlayActive: true,
         videoSrc: "/work/video/dron.mp4",
       },
@@ -87,7 +87,7 @@ export const works: Work[] = [
         heading: "Meta NFT",
         description:
           "",
-        imgSrc: "/home/work/new-normal-detail-1-2.jpg",
+        imgSrc: "/home/work/new-normal-detail-1-2.png",
         isPlayActive: true,
         videoSrc: "/work/video/meta.mp4",
       },
@@ -100,7 +100,7 @@ export const works: Work[] = [
       {
         heading: "Exchange market",
         description: "",
-        imgSrc: "/home/work/new-normal-detail-1-4.jpg",
+        imgSrc: "/home/work/new-normal-detail-1-4.png",
         isPlayActive: true,
         videoSrc: "/work/video/exchange.mp4",
       },

@@ -24,7 +24,7 @@ export const lists: List[] = [
     techs: ["Strategy consulting", "Process automation", "System integration"],
     description:
       "It all begins with transformation. We use strategic insights to modernize or revolutionize your operations, from your infrastructure to your workflows.",
-    videoSrc: "/home/services/1.mp4",
+    videoSrc: "/home/services/1.png",
   },
   {
     heading: "Enterprise solutions",

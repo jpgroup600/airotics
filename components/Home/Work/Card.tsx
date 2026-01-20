@@ -47,13 +47,15 @@ const Card: React.FC<Props> = (props) => {
           "focus:outline-none focus:ring-0",
         ].join(" ")}
       >
-        <Image
-          className="w-full object-cover"
-          src={imgSrc}
-          alt="work-card-detail"
-          height={1366}
-          width={689}
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            className="h-full w-full object-cover"
+            src={imgSrc}
+            alt="work-card-detail"
+            fill
+            sizes="(max-width: 1024px) 100vw, 330px"
+          />
+        </div>
 
         {isPlayActive ? (
           <Image

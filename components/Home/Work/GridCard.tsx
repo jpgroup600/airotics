@@ -62,13 +62,15 @@ const GridCard: React.FC<Props> = ({
                 {description}
               </p>
             </div>
-            <Image
-              className="w-full object-cover lg:h-[240px] lg:w-[320px]"
-              src={imgSrc}
-              alt="work-main-img"
-              height={1366}
-              width={689}
-            />
+            <div className="relative w-full overflow-hidden lg:h-[240px] lg:w-[320px]">
+              <Image
+                className="h-full w-full object-cover"
+                src={imgSrc}
+                alt="work-main-img"
+                fill
+                sizes="(max-width: 1024px) 100vw, 320px"
+              />
+            </div>
           </div>
           <Tape
             heading={heading}
