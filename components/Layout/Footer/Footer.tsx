@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="mb-6 flex items-center justify-between border-t border-white pt-10 lg:mb-12 lg:border-none lg:pt-20">
           <div className="h-[52px] w-[52px] border-4 border-white lg:h-[90px] lg:w-[90px] lg:border-8"></div>
           <p className="text-xl text-white lg:text-[6rem] lg:leading-none">
-            hello@airotics.com
+            hello@airotics.io
           </p>
         </div>
         <div className="flex flex-col gap-6">
@@ -31,7 +31,7 @@ const Footer = () => {
                 );
               })}
             </div>
-            <div className="hidden grid-cols-4 gap-4 lg:grid lg:max-w-[520px]">
+            {/* <div className="hidden grid-cols-4 gap-4 lg:grid lg:max-w-[520px]">
               {companyLogos.map((elem, index) => {
                 return (
                   <Image
@@ -44,7 +44,7 @@ const Footer = () => {
                   />
                 );
               })}
-            </div>
+            </div> */}
           </div>
           <div className="flex items-center lg:justify-between">
             <div className="flex gap-4 text-white lg:text-xl">
@@ -52,9 +52,9 @@ const Footer = () => {
               <p>FAQs</p>
               <p>Privacy Policy</p>
             </div>
-            <button className="my-6 hidden w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-[18px] py-3 text-lg text-white lg:flex">
+            {/* <button className="my-6 hidden w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-[18px] py-3 text-lg text-white lg:flex">
               Sign up to our newsletter{" "}
-            </button>
+            </button> */}
           </div>
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
@@ -72,7 +72,7 @@ const Footer = () => {
                 })}
               </div>
             </div>
-            <div className="hidden items-center justify-center gap-5 lg:flex">
+            {/* <div className="hidden items-center justify-center gap-5 lg:flex">
               <p className="text-center text-lg text-white">&copy; airotics 2025</p>
               <Image
                 src="/home/cyber-essentials.svg"
@@ -80,7 +80,7 @@ const Footer = () => {
                 height={80}
                 width={80}
               />
-            </div>
+            </div> */}
           </div>
           <div className="grid grid-cols-4 gap-4 lg:hidden">
             {companyLogos.map((elem, index) => {
@@ -96,9 +96,9 @@ const Footer = () => {
               );
             })}
           </div>
-          <button className="mx-auto my-6 flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-[18px] py-3 text-lg text-white lg:hidden">
+          {/* <button className="mx-auto my-6 flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-[18px] py-3 text-lg text-white lg:hidden">
             Sign up to our newsletter{" "}
-          </button>
+          </button> */}
           <div className="flex flex-col items-center justify-center gap-5 lg:hidden">
             <p className="text-center text-lg text-white">&copy; KOTA 2025</p>
             <Image

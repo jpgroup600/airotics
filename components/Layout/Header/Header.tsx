@@ -4,8 +4,9 @@ import { Arrow } from "./Svgs";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
+import { useRouter } from "next/router";
 const Header = () => {
+  const router = useRouter();
   //references
   const container = useRef<HTMLElement>(null);
 
@@ -80,17 +81,19 @@ const Header = () => {
       </div>
       <div className="flex items-center justify-center gap-6">
         
-        <button className="hidden h-[52px] cursor-pointer items-center justify-center gap-4 rounded-full bg-black px-5 text-lg text-white lg:flex">
-        <Link
-            onClick={handleMenuDisable}
-            
-            href="/contact"
-          >
+        <button 
+        onClick={()=> {
+          handleMenuDisable();
+          router.push("/contact");
+        }}
+        className="group hidden h-[52px] cursor-pointer items-center justify-center gap-4 rounded-full bg-black px-5 text-lg text-white lg:flex
+        hover:bg-white hover:text-black transition-all duration-300
+        ">
+       
          Hire us{" "}
 
-         </Link>
-          <span className="h-4 w-[18px]">
-            <Arrow color="#ffffff" />
+          <span className="inline-flex h-4 w-[18px] origin-center transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-[-45deg]">
+            <Arrow className="text-white transition-colors duration-300 group-hover:text-black" />
           </span>
         </button>
         <button

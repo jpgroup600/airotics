@@ -7,7 +7,9 @@ import Partners from "@/components/Agency/Partners/Partners";
 import Team from "@/components/Agency/Team/Team";
 import Head from "next/head";
 
+
 const AgencyPage = () => {
+
   return (
     <>
       <Head>

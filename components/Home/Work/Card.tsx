@@ -68,7 +68,7 @@ const Card: React.FC<Props> = (props) => {
         ) : (
           <></>
         )}
-        <div className="absolute bottom-0 left-0 flex h-fit min-h-[156px] w-full flex-col items-center justify-center gap-2 bg-black/30 p-6 backdrop-blur">
+        <div className="absolute bottom-0 left-0 flex h-fit min-h-[75px] w-full flex-col items-center justify-center gap-2 bg-black/30 p-6 backdrop-blur">
           <h4 className="text-center text-lg text-white uppercase">
             {heading}
           </h4>

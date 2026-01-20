@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ArrowDownLeft } from "../Common/Icons";
 
 const images = [
@@ -19,6 +21,10 @@ const Hero = () => {
   const containerRef = useRef<HTMLElement>(null);
   const lastPos = useRef({ x: 0, y: 0 });
   const indexRef = useRef(0);
+
+  useGSAP(() => {
+    gsap.to(".agency-heading", { y: 0, delay: 0.5, stagger: 0.3, duration: 1.5, ease: "power4.out" });
+  }, { scope: containerRef });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     const dx = e.clientX - lastPos.current.x;
@@ -52,7 +58,15 @@ const Hero = () => {
     >
       <div className="relative z-30 flex h-[90%] flex-col justify-center lg:h-[80%]">
         <h1 className="text-fs-100 max-w-[12ch] leading-[0.95]">
-          Committed to excellence in every project.
+          <span className="block overflow-hidden pb-[0em]">
+            <span className="agency-heading inline-block translate-y-full">Committed to</span>
+          </span>
+          <span className="block overflow-hidden pb-[0em]">
+            <span className="agency-heading inline-block translate-y-full">excellence in</span>
+          </span>
+          <span className="block overflow-hidden pb-[0.1em]">
+            <span className="agency-heading inline-block translate-y-full">every project.</span>
+          </span>
         </h1>
       </div>
 

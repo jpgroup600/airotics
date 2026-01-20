@@ -11,7 +11,7 @@ const ContactPage = () => {
         <title>Airotics Application | Contact</title>
       </Head>
       <video
-        className="fixed inset-0 -z-10 h-full w-full object-cover"
+        className="video-load fixed inset-0 -z-10 h-full w-full object-cover"
         src="/home/background.mp4"
         loop
         muted

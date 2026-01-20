@@ -1,11 +1,19 @@
 export const socialLinks = ["Linkedin", "Facebook", "Instagram", "Bluesky"];
 export const skills = [
-  "Agencies",
-  "SaaS and Tech",
-  "B2B Transformation",
-  "Healthcare",
-  "Media & Entertainment",
-  "Retail",
+  "Artificial Intelligence",
+  "Blockchain",
+  "Cloud Computing",
+  "Cybersecurity",
+  "Data Analytics",
+  "Digital Marketing",
+  "E-commerce",
+  "Internet of Things",
+  "Software Development",
+  "Web Development",
+  "Mobile Development",
+  "UI/UX Design",
+  "SEO",
+  "GEO",
 ];
 
 export const companyLogos = [
