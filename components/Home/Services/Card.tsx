@@ -1,5 +1,6 @@
 import { Arrow } from "@/components/Layout/Header/Svgs";
 import { List } from "./list";
+import Image from "next/image";
 
 type Props = List & { id: number };
 
@@ -10,6 +11,8 @@ const Card: React.FC<Props> = ({
   videoSrc,
   id,
 }) => {
+  const isImage = videoSrc.endsWith('.png') || videoSrc.endsWith('.jpg') || videoSrc.endsWith('.jpeg') || videoSrc.endsWith('.webp');
+  
   return (
     <div
       className={`card-${id} lg:absolute lg:inset-0 lg:flex lg:h-screen lg:items-center lg:justify-center`}
@@ -40,14 +43,24 @@ const Card: React.FC<Props> = ({
           </button> */}
         </div>
         <div className="lg:flex lg:w-[40%] lg:justify-stretch">
-          <video
-            className="mb-5 aspect-square rounded-tr-[75px] object-cover lg:mb-0 lg:rounded-tr-[200px]"
-            src={videoSrc}
-            muted
-            autoPlay
-            playsInline
-            loop
-          />
+          {isImage ? (
+            <Image
+              className="mb-5 aspect-square rounded-tr-[75px] object-cover lg:mb-0 lg:rounded-tr-[200px]"
+              src={videoSrc}
+              alt={heading}
+              width={500}
+              height={500}
+            />
+          ) : (
+            <video
+              className="mb-5 aspect-square rounded-tr-[75px] object-cover lg:mb-0 lg:rounded-tr-[200px]"
+              src={videoSrc}
+              muted
+              autoPlay
+              playsInline
+              loop
+            />
+          )}
         </div>
       </div>
     </div>
