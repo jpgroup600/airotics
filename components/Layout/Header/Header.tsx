@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRouter } from "next/router";
+import Image from "next/image";
 const Header = () => {
   const router = useRouter();
   //references
@@ -73,8 +74,16 @@ const Header = () => {
       <div className="flex items-center justify-center gap-4">
         <Link
           href="/"
-          className="relative h-[52px] w-[52px] border-4 border-black bg-white lg:h-[60px] lg:w-[60px] lg:bg-transparent flex items-center justify-center "
-        > <h2 className="text-2xl font-bold">AI</h2></Link>
+          className="flex items-center justify-center"
+        >
+          <Image
+            src="/home/logo.png"
+            alt="Logo"
+            width={60}
+            height={60}
+            className="lg:w-[80px] lg:h-[80px]"
+          />
+        </Link>
         <p className="hidden text-xs uppercase lg:block">
         Celebrating 5 years  : 2020 - 2025
         </p>
