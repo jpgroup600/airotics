@@ -29,17 +29,17 @@ const Hero = () => {
       ref={container}
       className="max-w-9xl 2xl:max-w-10xl px-7-percent 2xl:px-7.5-percent mx-auto grid min-h-screen w-full grid-cols-12 content-end gap-x-3 lg:content-center"
     >
-      <h1 className="font-display col-span-12 mt-26 h-fit overflow-hidden text-6xl text-black lg:col-start-1 lg:col-end-12 lg:mt-0 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
+      <h1 className="font-display col-span-12 mt-20 h-fit overflow-hidden text-[clamp(2.5rem,12vw,3.75rem)] leading-tight text-black lg:mt-0 lg:col-start-1 lg:col-end-12 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
         <span className="heading inline-block translate-y-full">push</span>
       </h1>
-      <h1 className="font-display col-span-12 h-fit overflow-hidden text-6xl text-black lg:col-start-3 lg:col-end-12 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
+      <h1 className="font-display col-span-12 h-fit overflow-hidden text-[clamp(2.5rem,12vw,3.75rem)] leading-tight text-black lg:col-start-3 lg:col-end-12 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
         <span className="heading inline-block translate-y-full">past</span>
       </h1>
-      <h1 className="font-display col-span-12 h-fit overflow-hidden text-6xl text-black lg:col-start-1 lg:col-end-9 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
+      <h1 className="font-display col-span-12 h-fit overflow-hidden text-[clamp(2.5rem,12vw,3.75rem)] leading-tight text-black lg:col-start-1 lg:col-end-9 lg:text-[9.6875rem] lg:leading-[calc(9.6875rem*1.2)] 2xl:text-[13.5rem] 2xl:leading-[calc(13.5rem*1.2)]">
         <span className="heading inline-block translate-y-full">limits</span>
       </h1>
-      <div className="col-span-12 mx-auto mt-6 flex w-full max-w-[320px] flex-col items-center justify-center lg:col-start-9 lg:col-end-13 lg:mt-0 2xl:max-w-[450px]">
-        <h2 className="description text-xl opacity-0 2xl:text-2xl">
+      <div className="col-span-12 mx-auto mt-6 flex w-full max-w-[min(320px,90vw)] flex-col items-center justify-center px-1 lg:col-start-9 lg:col-end-13 lg:mt-0 lg:max-w-[320px] 2xl:max-w-[450px]">
+        <h2 className="description text-base opacity-0 sm:text-xl 2xl:text-2xl">
           We&apos;re a forward-thinking digital innovation and technology agency based in London
           that creates exceptional solutions for companies who{" "}
           <strong>dare to transform.</strong>

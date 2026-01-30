@@ -15,7 +15,7 @@ export default function Home() {
         <title>Kota Application</title>
       </Head>
       <video
-        className="fixed inset-0 -z-10 h-full w-full object-cover"
+        className="fixed inset-0 -z-10 h-full w-full object-cover object-[75%] lg:object-center"
         src="/home/background.mp4"
         loop
         muted

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  overflow-x: hidden;
+}
+
 @theme inline {
   --color-background: #efefef;
   --font-sans: var(--font-montreal);

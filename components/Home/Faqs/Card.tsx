@@ -35,7 +35,7 @@ const Card: React.FC<Props> = ({ answer, question }) => {
     <div ref={container}>
       <button
         onClick={handleClick}
-        className="flex w-full gap-2 py-1 text-left text-[1.375rem] leading-[calc(1.375rem*1.3)] lg:gap-4 lg:py-2 lg:text-2xl lg:leading-snug 2xl:text-[2.125rem] 2xl:leading-[calc(2.125rem*1.2)]"
+        className="flex min-h-[48px] w-full items-center gap-2 py-3 text-left text-[1.25rem] leading-[calc(1.375rem*1.3)] active:opacity-80 lg:min-h-0 lg:gap-4 lg:py-2 lg:text-2xl lg:leading-snug 2xl:text-[2.125rem] 2xl:leading-[calc(2.125rem*1.2)]"
       >
         <div className="icon mt-2 h-4 w-4 min-w-4 lg:h-5 lg:w-5 lg:min-w-5 2xl:h-6 2xl:w-6 2xl:min-w-6">
           <Plus />
