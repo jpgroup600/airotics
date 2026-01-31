@@ -11,6 +11,8 @@ type Props = {
   bentoTwoImg: string;
   bentoThreeImg: string;
   bentoFourImg: string;
+  bentoFiveImg?: string;
+  bentoSixImg?: string;
   naviData: string[];
 };
 
@@ -21,6 +23,8 @@ const Hero: React.FC<Props> = ({
   bentoTwoImg,
   bentoThreeImg,
   bentoFourImg,
+  bentoFiveImg,
+  bentoSixImg,
   naviData,
   mainImageSrc,
 }) => {
@@ -54,6 +58,8 @@ const Hero: React.FC<Props> = ({
         bentoTwoImg={bentoTwoImg}
         bentoThreeImg={bentoThreeImg}
         bentoFourImg={bentoFourImg}
+        bentoFiveImg={bentoFiveImg}
+        bentoSixImg={bentoSixImg}
       />
     </section>
   );

@@ -53,12 +53,13 @@ const MarketingPage = () => {
               Show them who you <span className="font-bold">really are.</span>
             </>
           }
-          mainImageSrc="/services/digital-marketing/main.webp"
+          mainImageSrc="/home/logo.png"
           description="Create an instantly recognizable, unique brand presence that tells your customers who you are and leaves a lasting impression."
           bentoOneImg="/services/digital-marketing/bento/0.webp"
           bentoTwoImg="/services/digital-marketing/bento/1.webp"
           bentoThreeImg="/services/digital-marketing/bento/3.webp"
           bentoFourImg="/services/digital-marketing/bento/2.webp"
+          
           naviData={[
             "Marketing",
             "Digital marketing strategy",

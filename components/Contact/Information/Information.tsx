@@ -3,7 +3,7 @@ import Link from "next/link";
 const Information = () => {
   return (
     <section className="w-full bg-black pt-8 lg:pt-[7.5rem]">
-      <div className="mx-auto flex w-full max-w-[calc(1400px+15%)] flex-col gap-6 px-[7.5%] lg:grid lg:grid-cols-12 lg:gap-[0.75rem] 2xl:max-w-[1800px+15%]">
+      <div className="mx-auto w-full max-w-[calc(1400px+15%)] flex-col gap-[0.75rem] px-[7.5%] lg:grid lg:grid-cols-12 2xl:max-w-[1800px+15%]">
         <div className="col-span-6 flex flex-col gap-6 rounded-tr-[7.5rem] bg-white px-[1.25rem] py-[2rem] lg:gap-12 lg:rounded-tr-[12.5rem] lg:px-[3.125rem] lg:pt-[4.5rem] lg:pb-[3.5rem]">
           <div className="flex flex-col gap-3 lg:flex-row lg:gap-12">
             <div className="flex flex-col">

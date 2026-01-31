@@ -53,12 +53,14 @@ const AIPage = () => {
               Welcome to the <span className="font-bold">AI revolution</span>.
             </>
           }
-          mainImageSrc="/services/hero/main.webp"
+          mainImageSrc="/home/logo.png"
           description="Transforming businesses with intelligent automation and cutting-edge artificial intelligence solutions that drive innovation."
           bentoOneImg="/services/bento/0.webp"
           bentoTwoImg="/services/bento/1.webp"
           bentoThreeImg="/services/bento/3.webp"
           bentoFourImg="/services/bento/2.webp"
+          bentoFiveImg="/services/bento/4.webp"
+           bentoSixImg="/services/bento/5.webp"
           naviData={[
             "AI Services",
             "AI Strategy & Consulting",

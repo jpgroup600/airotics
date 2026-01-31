@@ -41,8 +41,7 @@ const Card: React.FC<Props> = (props) => {
         disabled={!videoSrc}
         onClick={() => videoSrc && setIsOpen(true)}
         className={[
-          "relative flex flex-col overflow-hidden rounded-3xl text-left",
-          "lg:max-w-[330px] lg:min-w-[330px]",
+          "relative flex h-full min-h-0 w-full max-w-full flex-col overflow-hidden rounded-3xl text-left",
           videoSrc ? "cursor-pointer" : "cursor-default",
           "focus:outline-none focus:ring-0",
         ].join(" ")}

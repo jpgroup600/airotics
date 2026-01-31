@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="max-w-9xl 2xl:max-w-10xl px-7-percent 2xl:px-7.5-percent mx-auto flex flex-col bg-black pb-10 lg:pb-20">
         <div className="mb-6 flex items-center justify-between border-t border-white pt-10 lg:mb-12 lg:border-none lg:pt-20">
           <div className="h-[52px] w-[52px] border-4 border-white lg:h-[90px] lg:w-[90px] lg:border-8"></div>
-          <p className="break-all text-base text-white sm:text-xl lg:text-[6rem] lg:leading-none">
+          <p className="text-xl text-white lg:text-[6rem] lg:leading-none">
             hello@airotics.io
           </p>
         </div>

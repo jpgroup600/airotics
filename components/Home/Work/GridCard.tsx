@@ -77,9 +77,21 @@ const GridCard: React.FC<Props> = ({
             marqueeColor={marqueeColor}
             gradient={gradient}
           />
-          <div className="flex flex-col gap-8 px-6 py-10 lg:flex-row">
-            {details.map((elem, index) => {
-              return <Card key={index} {...elem} />;
+          <div className="grid grid-cols-1 gap-8 px-6 py-10 sm:grid-cols-2 lg:min-h-[420px] lg:grid-cols-3 lg:grid-rows-[1fr_1fr] lg:gap-6">
+            {details.map((elem, cardIndex) => {
+              const gridClass =
+                cardIndex === 0
+                  ? "lg:col-start-1 lg:row-span-2 lg:h-full"
+                  : cardIndex === 1
+                    ? "lg:col-start-2 lg:row-start-1"
+                    : cardIndex === 2
+                      ? "lg:col-start-2 lg:row-start-2"
+                      : "lg:col-start-3 lg:row-span-2 lg:h-full";
+              return (
+                <div key={cardIndex} className={`flex min-h-0 ${gridClass}`}>
+                  <Card {...elem} />
+                </div>
+              );
             })}
           </div>
         </div>

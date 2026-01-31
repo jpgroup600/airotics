@@ -10,8 +10,8 @@ const Mission = () => {
         </h1>
         <Image
           className="order-1 aspect-square rounded-full object-cover lg:order-2 lg:col-span-3"
-          src="/agency/mission/mission.webp"
-          alt="img"
+          src="/home/logo.png"
+          alt="Logo"
           width={500}
           height={500}
         />

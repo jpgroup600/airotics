@@ -45,7 +45,7 @@ const Result = () => {
                     height={1080}
                   />
                   <Image
-                    className="mb-4 h-[60px] w-full max-w-[150px] min-w-[150px] object-contain invert-100 lg:mb-20 lg:hidden lg:h-fit"
+                    className="mb-4 h-[60px] w-full max-w-[150px] min-w-[150px] object-contain object-left lg:mb-20 lg:hidden lg:h-fit"
                     src={elem.companyLogo}
                     alt="company-logo"
                     width={1024}
@@ -53,7 +53,7 @@ const Result = () => {
                   />
                   <div className="relative z-10 order-2 flex flex-col lg:order-1 lg:col-span-5">
                     <Image
-                      className="mb-4 hidden h-[60px] w-full max-w-[150px] min-w-[150px] object-contain invert-100 lg:mb-20 lg:block lg:h-fit"
+                      className="mb-4 hidden h-[60px] w-full max-w-[150px] min-w-[150px] object-contain object-left lg:mb-20 lg:block lg:h-fit"
                       src={elem.companyLogo}
                       alt="company-logo"
                       width={1024}

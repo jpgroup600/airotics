@@ -19,7 +19,7 @@ const Content = () => {
         <h2 className="text-[2.8125rem] leading-none text-white uppercase lg:text-[9rem] 2xl:text-[10rem]">
           Our
         </h2>
-        <h2 className="ml-4 text-[2.8125rem] leading-none text-white uppercase sm:ml-8 lg:ml-12 lg:text-[9rem] 2xl:text-[10rem]">
+        <h2 className="ml-12 text-[2.8125rem] leading-none text-white uppercase lg:text-[9rem] 2xl:text-[10rem]">
           Work
         </h2>
       </div>

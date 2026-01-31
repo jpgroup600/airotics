@@ -69,7 +69,7 @@ const Header = () => {
   return (
     <header
       ref={container}
-      className="fixed top-0 left-1/2 z-40 flex w-full max-w-[2450px] -translate-x-1/2 items-center justify-between p-4 pb-4 pt-[max(1rem,env(safe-area-inset-top))] lg:p-[26px]"
+      className="fixed top-0 left-1/2 z-40 flex w-full max-w-[2450px] -translate-x-1/2 items-center justify-between p-6 lg:p-[26px]"
     >
       <div className="flex items-center justify-center gap-4">
         <Link
@@ -117,46 +117,46 @@ const Header = () => {
         onClick={handleMenuDisable}
         className="menu-cover pointer-events-none absolute inset-0 h-screen w-screen bg-black/20 opacity-0"
       ></div>
-      <div className="menu pointer-events-none absolute top-[max(18px,env(safe-area-inset-top))] right-4 z-10 flex min-w-[min(304px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] origin-top-right scale-0 flex-col rounded-4xl bg-white px-5 pt-[max(60px,calc(56px+env(safe-area-inset-top)))] pb-[max(1.5rem,env(safe-area-inset-bottom))] opacity-0 lg:right-[18px] lg:top-[22px] lg:min-w-[304px] lg:max-w-none lg:px-[30px] lg:pt-[60px] lg:pb-[30px]">
+      <div className="menu pointer-events-none absolute top-[18px] right-[18px] z-10 flex min-w-[304px] origin-top-right scale-0 flex-col rounded-4xl bg-white px-[30px] pt-[60px] pb-[30px] opacity-0 lg:top-[22px]">
         <div className="flex flex-col">
           <Link
             onClick={handleMenuDisable}
-            className="menu-links mb-1 min-h-[44px] flex items-center text-xl text-black capitalize opacity-0 active:opacity-70 lg:mb-2 lg:min-h-0 lg:text-2xl"
+            className="menu-links mb-2 text-2xl text-black capitalize opacity-0"
             href="/agency"
           >
             Agency
           </Link>
           <button
             onClick={handleSubMenuToggle}
-            className="menu-links mb-1 min-h-[44px] flex w-full cursor-pointer items-center text-left text-xl text-black capitalize opacity-0 active:opacity-70 lg:mb-2 lg:min-h-0 lg:text-2xl"
+            className="menu-links mb-2 cursor-pointer text-left text-2xl text-black capitalize opacity-0"
           >
             Services
           </button>
           <div className="sub-menu flex max-h-0 flex-col gap-0.5 overflow-hidden">
             <Link
               onClick={handleMenuDisable}
-              className="min-h-[44px] flex items-center font-light active:opacity-70 lg:min-h-0"
+              className="font-light"
               href="/services/web-and-app"
             >
               Web and app
             </Link>
             <Link
               onClick={handleMenuDisable}
-              className="min-h-[44px] flex items-center font-light active:opacity-70 lg:min-h-0"
+              className="font-light"
               href="/services/ai"
             >
               AI
             </Link>
             <Link
               onClick={handleMenuDisable}
-              className="min-h-[44px] flex items-center font-light active:opacity-70 lg:min-h-0"
+              className="font-light"
               href="/services/blockchain"
             >
               Blockchain
             </Link>
             <Link
               onClick={handleMenuDisable}
-              className="mb-2 min-h-[44px] flex items-center font-light active:opacity-70 lg:min-h-0"
+              className="mb-2 font-light"
               href="/services/marketing"
             >
               Marketing
@@ -164,13 +164,13 @@ const Header = () => {
           </div>
           <Link
             onClick={handleMenuDisable}
-            className="menu-links mb-2 min-h-[44px] flex items-center text-xl text-black capitalize opacity-0 active:opacity-70 lg:mb-0 lg:min-h-0 lg:text-2xl"
+            className="menu-links text-2xl text-black capitalize opacity-0"
             href="/contact"
           >
             Contact
           </Link>
         </div>
-        <button className="menu-inside-btn mt-6 flex min-h-[48px] scale-0 cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-3.5 active:opacity-90 lg:mt-7 lg:min-h-0">
+        <button className="menu-inside-btn mt-7 flex scale-0 cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-3.5">
         <Link
             onClick={handleMenuDisable}
            

@@ -54,12 +54,14 @@ const WebAndAppPage = () => {
               revolution.
             </>
           }
-          mainImageSrc="/services/hero/main.webp"
+          mainImageSrc="/home/logo.png"
           description="Crafting the future of web and mobile applications with innovative design and cutting-edge development technologies."
           bentoOneImg="/services/bento/0.webp"
           bentoTwoImg="/services/bento/1.webp"
           bentoThreeImg="/services/bento/3.webp"
           bentoFourImg="/services/bento/2.webp"
+          bentoFiveImg="/services/bento/4.webp"
+          bentoSixImg="/services/bento/5.webp"
           naviData={[
             "Web and app",
             "Web development",

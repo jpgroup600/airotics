@@ -16,7 +16,7 @@ const AgencyPage = () => {
         <title>Kota Application | Agency</title>
       </Head>
       <video
-        className="fixed inset-0 -z-10 h-full w-full object-cover"
+        className="fixed inset-0 -z-10 h-full w-full object-cover object-[72%_center] lg:object-center"
         src="/home/background.mp4"
         loop
         muted
