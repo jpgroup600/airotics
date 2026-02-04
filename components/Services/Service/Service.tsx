@@ -68,7 +68,7 @@ const Service: React.FC<Props> = ({
               </button> */}
             </div>
             <Image
-              className={`order-1 col-span-12 mb-6 aspect-square lg:col-span-6 lg:mb-0 ${
+              className={`order-1 col-span-12 mb-6 aspect-square object-cover object-center lg:col-span-6 lg:mb-0 ${
                 isReversed
                   ? "rounded-tl-[7.5rem] lg:order-1 lg:rounded-tl-[12.5rem]"
                   : "rounded-tr-[7.5rem] lg:order-2 lg:col-start-7 lg:rounded-tr-[12.5rem]"

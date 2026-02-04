@@ -12,7 +12,7 @@ const Approach = () => {
         <ArrowDownLeft />
       </div>
       <Image
-        className="col-span-5 mt-[5vw] aspect-square rounded-tl-[6rem] object-cover lg:rounded-tl-[12.5rem]"
+        className="col-span-5 mt-[5vw] aspect-square rounded-tl-[6rem] object-cover object-center lg:rounded-tl-[12.5rem]"
         src="/agency/approach/approach.webp"
         alt="image"
         width={1024}

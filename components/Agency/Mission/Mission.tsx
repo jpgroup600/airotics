@@ -9,7 +9,7 @@ const Mission = () => {
           <span className="pl-[13.5%]">Mission</span>
         </h1>
         <Image
-          className="order-1 aspect-square rounded-full object-cover lg:order-2 lg:col-span-3"
+          className="order-1 aspect-square rounded-full object-cover object-center lg:order-2 lg:col-span-3"
           src="/home/logo.png"
           alt="Logo"
           width={500}

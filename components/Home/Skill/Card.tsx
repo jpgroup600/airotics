@@ -88,7 +88,7 @@ const Card: React.FC<Props> = ({ description, imgUrl, id, title }) => {
         </div>
         <div className="image-block max-w-[480px] py-4 lg:absolute lg:top-0 lg:left-0 lg:z-[2] lg:w-[30%] lg:scale-0 2xl:top-1/2 2xl:-translate-y-1/2">
           <Image
-            className="aspect-square rounded-2xl"
+            className="aspect-square rounded-2xl object-cover object-center"
             src={imgUrl}
             alt="work-img"
             height={720}

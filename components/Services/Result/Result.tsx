@@ -38,7 +38,7 @@ const Result = () => {
               <SwiperSlide className="bg-background" key={index}>
                 <div className="relative grid min-h-[666px] w-full items-center gap-[0.75rem] overflow-hidden rounded-[1.25rem] rounded-tr-[7.5rem] border-2 border-black/20 p-6 lg:min-h-0 lg:grid-cols-12 lg:rounded-tr-[12.5rem] lg:pt-[4rem] lg:pr-[5rem] lg:pb-[2.5rem] lg:pl-[4rem]">
                   <Image
-                    className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-50 lg:opacity-100"
+                    className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-50 lg:opacity-100"
                     src="/services/result/background.webp"
                     alt="background"
                     width={1920}
@@ -79,7 +79,7 @@ const Result = () => {
                     </button>
                   </div>
                   <Image
-                    className="relative z-10 order-1 aspect-square w-full object-contain lg:order-2 lg:col-span-7"
+                    className="relative z-10 order-1 aspect-square w-full shrink-0 object-contain object-center lg:order-2 lg:col-span-7"
                     src={elem.previewImage}
                     alt="company-logo"
                     width={1024}

@@ -30,7 +30,7 @@ const Review = () => {
                   <Volume />
                 </div>
                 <Image
-                  className="mb-5 h-[68vh] rounded-[32px] object-cover"
+                  className="mb-5 h-[68vh] rounded-[32px] object-cover object-center"
                   src={`/home/reviews/${index}.jpg`}
                   alt="review-img"
                   height={1366}

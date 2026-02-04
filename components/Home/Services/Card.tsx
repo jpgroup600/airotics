@@ -45,7 +45,7 @@ const Card: React.FC<Props> = ({
         <div className="lg:flex lg:w-[40%] lg:justify-stretch">
           {isImage ? (
             <Image
-              className="mb-5 aspect-square rounded-tr-[75px] object-cover lg:mb-0 lg:rounded-tr-[200px]"
+              className="mb-5 aspect-square rounded-tr-[75px] object-cover object-center lg:mb-0 lg:rounded-tr-[200px]"
               src={videoSrc}
               alt={heading}
               width={500}

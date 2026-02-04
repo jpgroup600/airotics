@@ -81,7 +81,7 @@ const Header = () => {
             alt="Logo"
             width={60}
             height={60}
-            className="lg:w-[80px] lg:h-[80px]"
+            className="object-contain lg:w-[80px] lg:h-[80px]"
           />
         </Link>
         <p className="hidden text-xs uppercase lg:block">

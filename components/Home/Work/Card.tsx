@@ -41,14 +41,15 @@ const Card: React.FC<Props> = (props) => {
         disabled={!videoSrc}
         onClick={() => videoSrc && setIsOpen(true)}
         className={[
-          "relative flex h-full min-h-0 w-full max-w-full flex-col overflow-hidden rounded-3xl text-left",
+          "relative flex aspect-[4/3] w-full flex-col overflow-hidden rounded-3xl text-left",
+          "lg:max-w-[330px] lg:min-w-[330px] lg:shrink-0",
           videoSrc ? "cursor-pointer" : "cursor-default",
           "focus:outline-none focus:ring-0",
         ].join(" ")}
       >
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
             src={imgSrc}
             alt="work-card-detail"
             fill

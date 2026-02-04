@@ -62,13 +62,13 @@ const Team = () => {
                 slidesPerView={1}
               >
                 {team.map((elem, index) => (
-                  <SwiperSlide className="group" key={index}>
+                  <SwiperSlide className="group relative aspect-[3/4] w-full overflow-hidden" key={index}>
                     <Image
-                      className="cursor-pointer object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="cursor-pointer object-contain object-center transition-transform duration-500 group-hover:scale-105"
                       src={elem.image}
                       alt="team-member-img"
-                      width={1366}
-                      height={689}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 66vw"
                     />
                     <div className="absolute inset-0 flex h-full w-full flex-col justify-end bg-linear-to-b from-transparent from-70% to-black/80 px-8 py-5 text-white">
                       <h1 className="relative text-8xl">{elem.name}</h1>
@@ -85,7 +85,7 @@ const Team = () => {
           controller={{ control: topSwiper }}
           modules={[Controller]}
           spaceBetween={35}
-          initialSlide={10}
+          initialSlide={0}
           slidesPerView={1.3}
           loop
           slidesOffsetBefore={28}
@@ -100,13 +100,13 @@ const Team = () => {
           }}
         >
           {team.map((elem, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide className="relative aspect-[3/4] w-full overflow-hidden rounded-tr-[5rem]" key={index}>
               <Image
-                className="rounded-tr-[5rem] object-cover lg:brightness-50"
+                className="object-contain object-center lg:brightness-50"
                 src={elem.image}
                 alt="team-member-img"
-                width={1366}
-                height={689}
+                fill
+                sizes="(max-width: 768px) 80vw, 20vw"
               />
               <div className="absolute inset-0 flex h-full w-full flex-col justify-end bg-linear-to-b from-transparent from-70% to-black/80 px-5 py-3.5 text-white lg:hidden">
                 <h1 className="relative text-4xl">{elem.name}</h1>

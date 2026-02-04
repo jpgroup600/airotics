@@ -16,7 +16,7 @@ const Bento: React.FC<Props> = ({
   bentoFiveImg,
   bentoSixImg,
 }) => {
-  const imgClass = "rounded-[10px] object-cover lg:rounded-2xl";
+  const imgClass = "rounded-[10px] object-cover object-center lg:rounded-2xl";
 
   return (
     <div className="mt-[3.125rem] w-full">

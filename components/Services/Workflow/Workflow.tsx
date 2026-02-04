@@ -97,7 +97,7 @@ const WorkflowCard = ({
       className="flex w-[75vw] max-w-[1056px] flex-col gap-[4%] rounded-tr-[2.5rem] bg-white p-4 lg:mr-[3.125rem] lg:w-[65vw] lg:flex-row lg:rounded-tr-[7.5rem] lg:pt-[2vw] lg:pr-[3vw] lg:pb-[2vw] lg:pl-[2vw]"
     >
       <Image
-        className="aspect-square h-fit w-[22%] rounded-full object-cover"
+        className="aspect-square h-fit w-[22%] shrink-0 rounded-full object-cover object-center"
         src={elem.image}
         alt="phase-img"
         width={1024}

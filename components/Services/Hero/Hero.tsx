@@ -35,7 +35,7 @@ const Hero: React.FC<Props> = ({
           {heading}
         </h1>
         <Image
-          className="order-1 aspect-square h-[160px] w-[160px] rounded-full object-cover lg:order-2 lg:h-[346px] lg:w-[346px]"
+          className="order-1 aspect-square h-[160px] w-[160px] shrink-0 rounded-full object-cover object-center lg:order-2 lg:h-[346px] lg:w-[346px]"
           src={mainImageSrc}
           alt="hero-img"
           width={1024}
