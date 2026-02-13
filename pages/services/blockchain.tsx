@@ -13,25 +13,25 @@ const BlockchainPage = () => {
       title: "Blockchain Development",
       description:
         "Building decentralized applications and smart contracts using cutting-edge blockchain technologies that provide transparency, security and trust.",
-      image: "/services/services/web-dev.webp",
+      image: "/page/coin/1.png",
     },
     {
       title: "Smart Contract Solutions",
       description:
         "Creating secure and efficient smart contracts that automate processes and enable trustless transactions across various industries.",
-      image: "/services/services/creative-web-design.webp",
+      image: "/page/coin/2.png",
     },
     {
       title: "DeFi Platforms",
       description:
         "We develop decentralized finance solutions that deliver impact - not just enabling transactions, but revolutionizing financial systems.",
-      image: "/services/services/copywriting.webp",
+      image: "/page/coin/3.png",
     },
     {
       title: "NFT Marketplaces",
       description:
         "Use blockchain technology and innovation to your advantage, turning digital assets into valuable opportunities.",
-      image: "/services/services/e-commerce.webp",
+      image: "/page/coin/4.png",
     },
   ];
 
@@ -55,7 +55,7 @@ const BlockchainPage = () => {
           bentoThreeImg="/services/bento/3.webp"
           bentoFourImg="/services/bento/2.webp"
           bentoFiveImg="/services/bento/4.webp"
-           bentoSixImg="/services/bento/5.webp"
+          bentoSixImg="/services/bento/5.webp"
           naviData={[
             "Blockchain",
             "Blockchain development",

@@ -13,31 +13,31 @@ const MarketingPage = () => {
       title: "Digital Marketing Strategy",
       description:
         "Developing comprehensive marketing strategies that align with your business goals and drive measurable results across all digital channels.",
-      image: "/services/services/creative-web-design.webp",
+      image: "/page/markating/1.png",
     },
     {
       title: "Social Media Marketing",
       description:
         "Creating engaging social media campaigns that build brand awareness, foster community and drive conversions across platforms.",
-      image: "/services/services/web-dev.webp",
+      image: "/page/markating/2.webp",
     },
     {
       title: "Content Marketing",
       description:
         "We produce compelling content that delivers impact - not just telling your story, but building your brand presence.",
-      image: "/services/services/copywriting.webp",
+      image: "/page/markating/3.png",
     },
     {
       title: "SEO & SEM",
       description:
         "Use search engine optimization and marketing to your advantage, turning potential customers into committed clients.",
-      image: "/services/services/e-commerce.webp",
+      image: "/page/markating/4.png",
     },
     {
       title: "Marketing Analytics",
       description:
         "Data-driven marketing insights that optimize campaigns, improve ROI and maximize your marketing effectiveness.",
-      image: "/services/services/wordpress.webp",
+      image: "/page/markating/image.png",
     },
   ];
 
@@ -55,11 +55,13 @@ const MarketingPage = () => {
           }
           mainImageSrc="/home/logo.png"
           description="Create an instantly recognizable, unique brand presence that tells your customers who you are and leaves a lasting impression."
-          bentoOneImg="/services/digital-marketing/bento/0.webp"
-          bentoTwoImg="/services/digital-marketing/bento/1.webp"
-          bentoThreeImg="/services/digital-marketing/bento/3.webp"
-          bentoFourImg="/services/digital-marketing/bento/2.webp"
-          
+          bentoOneImg="/agency/trail/0.webp"
+          bentoTwoImg="/agency/trail/0.webp"
+          bentoThreeImg="/agency/trail/1.webp"
+          bentoFourImg="/agency/trail/2.webp"
+          bentoFiveImg="/agency/trail/3.webp"
+          bentoSixImg="/agency/trail/4.webp"
+
           naviData={[
             "Marketing",
             "Digital marketing strategy",

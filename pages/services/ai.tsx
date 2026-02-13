@@ -13,31 +13,31 @@ const AIPage = () => {
       title: "AI Strategy & Consulting",
       description:
         "Leveraging cutting-edge artificial intelligence technologies and innovative frameworks, we develop strategic solutions that transform businesses and drive meaningful outcomes.",
-      image: "/services/services/creative-web-design.webp",
+      image: "/page/ai/1.png",
     },
     {
       title: "Machine Learning Solutions",
       description:
         "Built with advanced algorithms and intelligent automation systems, we create predictive models and smart applications that optimize processes and unlock new possibilities.",
-      image: "/services/services/web-dev.webp",
+      image: "/page/ai/2.png",
     },
     {
       title: "AI Content Generation",
       description:
         "We produce intelligent content that delivers impact - not just communicating your message, but amplifying your presence.",
-      image: "/services/services/copywriting.webp",
+      image: "/page/ai/3.png",
     },
     {
       title: "AI-Powered Analytics",
       description:
         "Harness data intelligence and machine learning insights to your advantage, converting raw information into actionable strategies.",
-      image: "/services/services/e-commerce.webp",
+      image: "/page/ai/4.png",
     },
     {
       title: "Custom AI Integration",
       description:
         "Bespoke artificial intelligence systems that transform operations, experiences and outcomes.",
-      image: "/services/services/wordpress.webp",
+      image: "/page/ai/5.png",
     },
   ];
 
@@ -60,7 +60,7 @@ const AIPage = () => {
           bentoThreeImg="/services/bento/3.webp"
           bentoFourImg="/services/bento/2.webp"
           bentoFiveImg="/services/bento/4.webp"
-           bentoSixImg="/services/bento/5.webp"
+          bentoSixImg="/services/bento/5.webp"
           naviData={[
             "AI Services",
             "AI Strategy & Consulting",
