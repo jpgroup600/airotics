@@ -124,7 +124,7 @@ const Header = () => {
             className="menu-links mb-2 text-2xl text-black capitalize opacity-0"
             href="/agency"
           >
-            Agency
+            Our Team
           </Link>
           <button
             onClick={handleSubMenuToggle}

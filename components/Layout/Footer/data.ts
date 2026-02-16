@@ -1,4 +1,4 @@
-export const socialLinks = ["Linkedin", "Facebook", "Instagram", "Bluesky"];
+export const socialLinks = ["", "", "", ""];
 export const skills = [
   "Artificial Intelligence",
   "Blockchain",

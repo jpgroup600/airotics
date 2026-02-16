@@ -3,6 +3,10 @@ export type List = {
   techs: string[];
   description: string;
   videoSrc: string;
+  buttonInfo: {
+    text: string;
+    link: string;
+  }[];
 };
 
 export const lists: List[] = [
@@ -18,6 +22,15 @@ export const lists: List[] = [
     description:
       "Building intelligent systems where innovation meets efficiency, driving growth and unlocking competitive advantage with every solution.",
     videoSrc: "/home/services/0.mp4",
+    buttonInfo: [{
+        text: "AI solutions",
+        link: "/services/ai",
+      },
+      {
+        text: "Blockchain solutions",
+        link: "/services/blockchain",
+      },
+    ],
   },
   {
     heading: "Digital transformation",
@@ -25,6 +38,11 @@ export const lists: List[] = [
     description:
       "It all begins with transformation. We use strategic insights to modernize or revolutionize your operations, from your infrastructure to your workflows.",
     videoSrc: "/home/services/1.png",
+    buttonInfo: [{
+      text: "App & Web",
+      link: "/services/web-and-app",
+    },
+  ],
   },
   {
     heading: "Enterprise solutions",
@@ -32,5 +50,10 @@ export const lists: List[] = [
     description:
       "Creating powerful enterprise platforms and applications that capture attention, inspire confidence and accelerate business growth.",
     videoSrc: "/home/services/2.mp4",
+    buttonInfo: [{
+      text: "Marketing",
+      link: "/services/marketing",
+    },
+  ],
   },
 ];

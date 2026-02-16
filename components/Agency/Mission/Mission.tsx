@@ -28,16 +28,16 @@ const Mission = () => {
       </section>
       <div className="relative h-fit w-full">
         <video
-          className="aspect-video w-full object-cover"
+          className="aspect-video w-full h-[60vh] md:h-full object-cover"
           src="/agency/mission/Short-Preview-Agency.mp4"
           loop
           muted
           autoPlay
           playsInline
         />
-        <div className="absolute inset-1/2 flex size-[7em] -translate-1/2 items-center justify-center rounded-full bg-white lg:size-[10em]">
+        {/* <div className="absolute inset-1/2 flex size-[7em] -translate-1/2 items-center justify-center rounded-full bg-white lg:size-[10em]">
           <p className="lg:text-fs-44 text-2xl leading-none">Play</p>
-        </div>
+        </div> */}
       </div>
     </>
   );

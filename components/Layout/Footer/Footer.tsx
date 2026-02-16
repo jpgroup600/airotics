@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-6">
           <div className="flex lg:justify-between">
-            <div className="flex flex-wrap gap-4">
+            {/* <div className="flex flex-wrap gap-4">
               {socialLinks.map((elem, index) => {
                 return (
                   <Link
@@ -30,7 +30,7 @@ const Footer = () => {
                   </Link>
                 );
               })}
-            </div>
+            </div> */}
             {/* <div className="hidden grid-cols-4 gap-4 lg:grid lg:max-w-[520px]">
               {companyLogos.map((elem, index) => {
                 return (
@@ -82,7 +82,7 @@ const Footer = () => {
               />
             </div> */}
           </div>
-          <div className="grid grid-cols-4 gap-4 lg:hidden">
+          {/* <div className="grid grid-cols-4 gap-4 lg:hidden">
             {companyLogos.map((elem, index) => {
               return (
                 <Image
@@ -95,18 +95,12 @@ const Footer = () => {
                 />
               );
             })}
-          </div>
+          </div> */}
           {/* <button className="mx-auto my-6 flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-white px-[18px] py-3 text-lg text-white lg:hidden">
             Sign up to our newsletter{" "}
           </button> */}
           <div className="flex flex-col items-center justify-center gap-5 lg:hidden">
-            <p className="text-center text-lg text-white">&copy; KOTA 2025</p>
-            <Image
-              src="/home/cyber-essentials.svg"
-              alt="icon"
-              height={80}
-              width={80}
-            />
+            <p className="text-center text-lg text-white">&copy; {new Date().getFullYear()} AIROTICS</p>
           </div>
         </div>
       </footer>
