@@ -38,7 +38,7 @@ const BlockchainPage = () => {
   return (
     <>
       <Head>
-        <title>Kota Application | Blockchain</title>
+        <title>Airotics Application | Blockchain</title>
       </Head>
       <div className="bg-[#efefef]">
         <Hero

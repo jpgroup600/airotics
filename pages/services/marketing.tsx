@@ -44,7 +44,7 @@ const MarketingPage = () => {
   return (
     <>
       <Head>
-        <title>Kota Application | Marketing</title>
+        <title>Airotics | Marketing Services</title>
       </Head>
       <div className="bg-[#efefef]">
         <Hero

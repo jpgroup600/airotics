@@ -44,7 +44,7 @@ const WebAndAppPage = () => {
   return (
     <>
       <Head>
-        <title>Kota Application | Web and App</title>
+        <title>Airotics Application | Web and App</title>
       </Head>
       <div className="bg-[#efefef]">
         <Hero
