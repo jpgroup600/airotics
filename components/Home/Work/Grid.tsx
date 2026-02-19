@@ -60,6 +60,7 @@ const Grid = () => {
         return <GridCard {...elem} key={index} index={index} />;
       })}
     </div>
+
   );
 };
 

@@ -11,7 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
-    const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+      prevent: (node) => !!node.closest("[data-lenis-prevent]"),
+    });
     lenis.on("scroll", ScrollTrigger.update);
 
     let rafId = 0;

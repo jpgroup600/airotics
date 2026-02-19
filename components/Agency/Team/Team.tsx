@@ -49,12 +49,20 @@ const Team = () => {
                 controller={{ control: bottomSwiper }}
                 effect={"creative"}
                 loop
+                speed={900}
+                watchSlidesProgress
                 creativeEffect={{
+                  limitProgress: 1,
+                  perspective: true,
                   prev: {
-                    translate: ["-100%", 0, 0],
+                    translate: ["-92%", 0, -120],
+                    opacity: 0.45,
+                    scale: 0.92,
                   },
                   next: {
-                    translate: [0, 0, 0],
+                    translate: ["92%", 0, -120],
+                    opacity: 0.45,
+                    scale: 0.92,
                   },
                 }}
                 modules={[EffectCreative, Controller]}
@@ -71,7 +79,7 @@ const Team = () => {
                       sizes="(max-width: 768px) 100vw, 66vw"
                     />
                     <div className="absolute inset-0 flex h-full w-full flex-col justify-end bg-linear-to-b from-transparent from-70% to-black/80 px-8 py-5 text-white">
-                      <h1 className="relative text-8xl">{elem.name}</h1>
+                      <h1 className="relative text-7xl">{elem.name}</h1>
                       <p className="relative text-xl">{elem.post}</p>
                     </div>
                   </SwiperSlide>
@@ -84,6 +92,7 @@ const Team = () => {
           onSwiper={setBottomSwiper}
           controller={{ control: topSwiper }}
           modules={[Controller]}
+          speed={900}
           spaceBetween={35}
           initialSlide={0}
           slidesPerView={1.3}

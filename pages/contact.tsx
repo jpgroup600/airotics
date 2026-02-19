@@ -20,7 +20,7 @@ const ContactPage = () => {
       />
       <Hero />
       <Form />
-      <Information />
+      {/* <Information /> */}
       <Extro />
     </>
   );

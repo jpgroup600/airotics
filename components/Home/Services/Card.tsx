@@ -41,7 +41,7 @@ const Card: React.FC<Props> = ({
           {buttonInfo.map((elem, index) => {
             return (
               <button onClick={() => router.push(elem.link)} className="flex w-fit items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-2 lg:px-6 lg:py-3 lg:text-lg
-                hover:bg-black hover:text-white transition-all duration-300
+                hover:bg-black hover:text-white transition-all duration-300 cursor-pointer
               ">
                 {elem.text}
               </button>

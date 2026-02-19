@@ -1,4 +1,6 @@
 import { LargeTextLine } from "../Skill/Svgs";
+import Link from "next/link";
+
 const Content = () => {
   return (
     <div className="flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-16">
@@ -14,6 +16,12 @@ const Content = () => {
         it demands relentless logic and verifiable execution. 
         We thrive where others fail because we reject creative compromise and technical limits.
         </p>
+        <Link
+          href="/ourwork"
+          className="inline-flex w-fit items-center rounded-full border border-white px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-black"
+        >
+          View all projects
+        </Link>
       </div>
       <div className="flex flex-col lg:mt-40">
         <h2 className="text-[2.8125rem] leading-none text-white uppercase lg:text-[9rem] 2xl:text-[10rem]">
