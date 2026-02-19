@@ -1,18 +1,21 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import PortfolioModal from '@/components/portfolio/PortfolioModal';
 import portfolioData, { quickPortfolioData } from '@/components/portfolio/data';
 
 export default function OurWork() {
   type PortfolioItem = (typeof portfolioData)[number];
   type QuickPortfolioItem = (typeof quickPortfolioData)[number];
+  const QUICK_ITEMS_PER_PAGE = 8;
   const portfolioItems = portfolioData as PortfolioItem[];
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
+  const [quickPage, setQuickPage] = useState(1);
 
   const categories = [
     { key: 'all', name: 'All' },
@@ -34,6 +37,17 @@ export default function OurWork() {
     : quickPortfolioData.filter((item) => item.category === activeFilter);
   const featuredPortfolio = filteredPortfolio.slice(0);
   const quickPortfolio = filteredQuickPortfolio;
+  const quickTotalPages = Math.max(1, Math.ceil(quickPortfolio.length / QUICK_ITEMS_PER_PAGE));
+  const quickStart = (quickPage - 1) * QUICK_ITEMS_PER_PAGE;
+  const pagedQuickPortfolio = quickPortfolio.slice(quickStart, quickStart + QUICK_ITEMS_PER_PAGE);
+
+  useEffect(() => {
+    setQuickPage(1);
+  }, [activeFilter]);
+
+  useEffect(() => {
+    if (quickPage > quickTotalPages) setQuickPage(quickTotalPages);
+  }, [quickPage, quickTotalPages]);
 
   return (
     <>
@@ -139,7 +153,7 @@ export default function OurWork() {
               <p className="text-sm text-black/60 lg:text-base">Quick preview with direct links</p>
             </div>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {quickPortfolio.map((item) => (
+              {pagedQuickPortfolio.map((item) => (
                 <Link
                   key={item.id}
                   href={item.projectUrl}
@@ -148,9 +162,12 @@ export default function OurWork() {
                   className="group overflow-hidden rounded-2xl border border-black/15 bg-white/85 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <div className="relative aspect-video overflow-hidden bg-black">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -161,6 +178,27 @@ export default function OurWork() {
                 </Link>
               ))}
             </div>
+            {quickTotalPages > 1 && (
+              <div className="mt-8 flex items-center justify-center gap-3">
+                <button
+                  onClick={() => setQuickPage((prev) => Math.max(1, prev - 1))}
+                  disabled={quickPage === 1}
+                  className="rounded-full border border-black/20 bg-white px-4 py-2 text-sm text-black transition disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Prev
+                </button>
+                <p className="text-sm text-black/70">
+                  {quickPage} / {quickTotalPages}
+                </p>
+                <button
+                  onClick={() => setQuickPage((prev) => Math.min(quickTotalPages, prev + 1))}
+                  disabled={quickPage === quickTotalPages}
+                  className="rounded-full border border-black/20 bg-white px-4 py-2 text-sm text-black transition disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </section>
         )}
 
