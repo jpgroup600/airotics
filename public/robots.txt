@@ -1,0 +1,33 @@
+# robots.txt for Airotics
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Disallow paths (if any)
+# Disallow: /admin
+# Disallow: /api
+
+# Block tracking parameters from being indexed
+Disallow: /*?utm_source
+Disallow: /*?utm_medium
+Disallow: /*?utm_campaign
+Disallow: /*?utm_content
+Disallow: /*?utm_term
+Disallow: /*?ref
+Disallow: /*?fbclid
+
+# Sitemap
+Sitemap: https://airotics.io/sitemap.xml

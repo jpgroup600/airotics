@@ -5,7 +5,9 @@ import Intro from "@/components/Services/Intro/Intro";
 import Result from "@/components/Services/Result/Result";
 import Service from "@/components/Services/Service/Service";
 import Workflow from "@/components/Services/Workflow/Workflow";
-import Head from "next/head";
+import SEO from "@/components/Common/SEO";
+import { ServiceSchema, BreadcrumbSchema } from "@/components/Common/StructuredData";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 const AIPage = () => {
   const aiServices = [
@@ -43,9 +45,32 @@ const AIPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Kota Application | AI Services</title>
-      </Head>
+      <SEO
+        title="AI Services - Artificial Intelligence Solutions"
+        description="Transform your business with Airotics' AI services. From AI strategy and consulting to machine learning solutions, we deliver cutting-edge artificial intelligence technology."
+        keywords="AI services, artificial intelligence, machine learning, AI consulting, AI strategy, AI solutions, AI development, AI integration"
+        canonical={`${SITE_URL}/services/ai`}
+        ogImage="/services/ai-og-image.png"
+      />
+
+      <ServiceSchema
+        name="AI Services"
+        description="Comprehensive AI and machine learning solutions for business transformation"
+        provider={{
+          name: SITE_NAME,
+          url: SITE_URL,
+        }}
+        serviceType="Artificial Intelligence Solutions"
+      />
+
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+          { name: "AI Services", url: `${SITE_URL}/services/ai` },
+        ]}
+      />
+
       <div className="bg-[#efefef]">
         <Hero
           heading={
