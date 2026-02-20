@@ -2,16 +2,11 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" translate="no" className="notranslate">
       <Head>
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-
-        {/* Manifest for PWA (optional) */}
-        {/* <link rel="manifest" href="/site.webmanifest" /> */}
+        <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
 
         {/* DNS Prefetch for Performance */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -22,9 +17,10 @@ export default function Document() {
         {/* Additional Meta Tags */}
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta httpEquiv="content-language" content="en" />
+        <meta name="google" content="notranslate" />
       </Head>
-      <body className="overscroll-none antialiased">
+      <body className="overscroll-none antialiased notranslate">
         <Main />
         <NextScript />
       </body>

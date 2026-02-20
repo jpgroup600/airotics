@@ -152,7 +152,7 @@ export default function OurWork() {
               <h2 className="text-2xl font-semibold text-black lg:text-4xl">More Works</h2>
               <p className="text-sm text-black/60 lg:text-base">Quick preview with direct links</p>
             </div>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 grid-cols-2">
               {pagedQuickPortfolio.map((item) => (
                 <Link
                   key={item.id}

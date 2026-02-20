@@ -1,6 +1,7 @@
 import { Attach } from "@/components/Agency/Common/Icons";
 import { Arrow } from "@/components/Layout/Header/Svgs";
 import { useState } from "react";
+import axios from "axios";
 
 interface UserForm {
   services: string[];
@@ -35,6 +36,15 @@ const Form = () => {
     privacyAccepted: false,
   });
 
+  const handleSubmit = () => {
+    console.log(userForm);
+    axios.post("/api/hello", userForm).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+  };
+
   return (
     <section className="mx-auto flex w-full max-w-[calc(1400px+15%)] flex-col gap-[0.75rem] px-[7.5%] py-[5vw] lg:grid lg:grid-cols-12 lg:py-[10vw] 2xl:max-w-[1800px+15%]">
       <form className="lg:col-span-10">
@@ -46,8 +56,11 @@ const Form = () => {
                 <label
                   key={index}
                   className="peer cursor-pointer rounded-full py-2 text-base transition-colors lg:py-3 lg:text-xl"
+                
                 >
-                  <input className="peer appearance-none" type="checkbox" />
+                  <input className="peer appearance-none" type="checkbox" 
+                  onChange={(e) => setUserForm({ ...userForm, services: [...userForm.services, elem] })}
+                  />
                   <span className="rounded-full border-2 border-black p-2 text-black select-none peer-checked:bg-black peer-checked:text-white hover:bg-black hover:text-white lg:px-5 lg:py-3">
                     {elem}
                   </span>
@@ -76,7 +89,7 @@ const Form = () => {
             onChange={(e) => setUserForm({ ...userForm, email: e.target.value })}
           />
         </div>
-        <div className="mb-8 grid gap-12 lg:grid-cols-2">
+        <div className="mb-8 grid gap-12 lg:grid-cols-1">
           <div className="flex flex-col gap-3.5">
             <input
               className="border-b-2 border-black px-0.5 py-1 text-[clamp(1.375rem,1.5vw,1.875rem)] leading-[150%] placeholder:text-black focus:outline-none"
@@ -89,13 +102,13 @@ const Form = () => {
               <span className="underline">here.</span>
             </span>
           </div>
-          <label className="flex h-fit items-center gap-3.5 border-b-2 border-black px-0.5 py-1 text-[clamp(1.375rem,1.5vw,1.875rem)] leading-[150%]">
+          {/* <label className="flex h-fit items-center gap-3.5 border-b-2 border-black px-0.5 py-1 text-[clamp(1.375rem,1.5vw,1.875rem)] leading-[150%]">
             <input type="file" className="hidden" />
             <span className="h-5 w-5">
               <Attach />
             </span>
             <span>Attachments</span>
-          </label>
+          </label> */}
         </div>
         <textarea
           rows={1}
@@ -126,12 +139,15 @@ const Form = () => {
               </p>
             </label>
           </div>
-          <button className="flex w-fit cursor-pointer items-center gap-2 rounded-full bg-black px-6 py-3 text-white">
+          <div 
+          
+          onClick={handleSubmit}
+          className="flex w-fit cursor-pointer items-center gap-2 rounded-full bg-black px-6 py-3 text-white">
             Submit
             <span className="size-[18px]">
               <Arrow color="#ffffff" />
             </span>
-          </button>
+          </div>
         </div>
       </form>
     </section>
