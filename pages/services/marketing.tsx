@@ -13,31 +13,31 @@ const MarketingPage = () => {
       title: "Digital Marketing Strategy",
       description:
         "Developing comprehensive marketing strategies that align with your business goals and drive measurable results across all digital channels.",
-      image: "/services/services/creative-web-design.webp",
+      image: "/services/marketing/service-1.jpg",
     },
     {
       title: "Social Media Marketing",
       description:
         "Creating engaging social media campaigns that build brand awareness, foster community and drive conversions across platforms.",
-      image: "/services/services/web-dev.webp",
+      image: "/services/marketing/service-2.jpg",
     },
     {
       title: "Content Marketing",
       description:
         "We produce compelling content that delivers impact - not just telling your story, but building your brand presence.",
-      image: "/services/services/copywriting.webp",
+      image: "/services/marketing/service-3.jpg",
     },
     {
       title: "SEO & SEM",
       description:
         "Use search engine optimization and marketing to your advantage, turning potential customers into committed clients.",
-      image: "/services/services/e-commerce.webp",
+      image: "/services/marketing/service-4.jpg",
     },
     {
       title: "Marketing Analytics",
       description:
         "Data-driven marketing insights that optimize campaigns, improve ROI and maximize your marketing effectiveness.",
-      image: "/services/services/wordpress.webp",
+      image: "/services/marketing/service-5.jpg",
     },
   ];
 
@@ -53,13 +53,14 @@ const MarketingPage = () => {
               Show them who you <span className="font-bold">really are.</span>
             </>
           }
-          mainImageSrc="/home/logo.png"
+          mainImageSrc="/services/marketing/hero-main.jpg"
           description="Create an instantly recognizable, unique brand presence that tells your customers who you are and leaves a lasting impression."
-          bentoOneImg="/services/digital-marketing/bento/0.webp"
-          bentoTwoImg="/services/digital-marketing/bento/1.webp"
-          bentoThreeImg="/services/digital-marketing/bento/3.webp"
-          bentoFourImg="/services/digital-marketing/bento/2.webp"
-          
+          bentoOneImg="/services/marketing/bento-0.jpg"
+          bentoTwoImg="/services/marketing/bento-1.jpg"
+          bentoThreeImg="/services/marketing/bento-2.jpg"
+          bentoFourImg="/services/marketing/bento-3.jpg"
+          bentoFiveImg="/services/marketing/bento-4.jpg"
+          bentoSixImg="/services/marketing/bento-5.jpg"
           naviData={[
             "Marketing",
             "Digital marketing strategy",
@@ -74,7 +75,7 @@ const MarketingPage = () => {
           description="Don't just compete – dominate, with strategic marketing solutions that capture attention and deliver measurable results."
         />
         <Service services={marketingServices} />
-        <Result />
+        {/* <Result /> */}
         <Workflow />
         <Faqs />
         <Interested />
@@ -84,4 +85,3 @@ const MarketingPage = () => {
 };
 
 export default MarketingPage;
-

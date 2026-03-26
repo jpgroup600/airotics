@@ -6,7 +6,10 @@ import Result from "@/components/Services/Result/Result";
 import Service from "@/components/Services/Service/Service";
 import Workflow from "@/components/Services/Workflow/Workflow";
 import SEO from "@/components/Common/SEO";
-import { ServiceSchema, BreadcrumbSchema } from "@/components/Common/StructuredData";
+import {
+  ServiceSchema,
+  BreadcrumbSchema,
+} from "@/components/Common/StructuredData";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 const AIPage = () => {
@@ -15,31 +18,31 @@ const AIPage = () => {
       title: "AI Strategy & Consulting",
       description:
         "Leveraging cutting-edge artificial intelligence technologies and innovative frameworks, we develop strategic solutions that transform businesses and drive meaningful outcomes.",
-      image: "/services/services/creative-web-design.webp",
+      image: "/services/ai/service-1.jpg",
     },
     {
       title: "Machine Learning Solutions",
       description:
         "Built with advanced algorithms and intelligent automation systems, we create predictive models and smart applications that optimize processes and unlock new possibilities.",
-      image: "/services/services/web-dev.webp",
+      image: "/services/ai/service-2.jpg",
     },
     {
       title: "AI Content Generation",
       description:
         "We produce intelligent content that delivers impact - not just communicating your message, but amplifying your presence.",
-      image: "/services/services/copywriting.webp",
+      image: "/services/ai/service-3.jpg",
     },
     {
       title: "AI-Powered Analytics",
       description:
         "Harness data intelligence and machine learning insights to your advantage, converting raw information into actionable strategies.",
-      image: "/services/services/e-commerce.webp",
+      image: "/services/ai/service-4.jpg",
     },
     {
       title: "Custom AI Integration",
       description:
         "Bespoke artificial intelligence systems that transform operations, experiences and outcomes.",
-      image: "/services/services/wordpress.webp",
+      image: "/services/ai/service-5.jpg",
     },
   ];
 
@@ -78,14 +81,14 @@ const AIPage = () => {
               Welcome to the <span className="font-bold">AI revolution</span>.
             </>
           }
-          mainImageSrc="/home/logo.png"
+          mainImageSrc="/services/ai/hero-main.jpg"
           description="Transforming businesses with intelligent automation and cutting-edge artificial intelligence solutions that drive innovation."
-          bentoOneImg="/services/bento/0.webp"
-          bentoTwoImg="/services/bento/1.webp"
-          bentoThreeImg="/services/bento/3.webp"
-          bentoFourImg="/services/bento/2.webp"
-          bentoFiveImg="/services/bento/4.webp"
-           bentoSixImg="/services/bento/5.webp"
+          bentoOneImg="/services/ai/bento-0.jpg"
+          bentoTwoImg="/services/ai/bento-1.jpg"
+          bentoThreeImg="/services/ai/bento-2.jpg"
+          bentoFourImg="/services/ai/bento-3.jpg"
+          bentoFiveImg="/services/ai/bento-4.jpg"
+          bentoSixImg="/services/ai/bento-5.jpg"
           naviData={[
             "AI Services",
             "AI Strategy & Consulting",
@@ -100,7 +103,7 @@ const AIPage = () => {
           description="Don't just adapt to change – lead the transformation, with powerful AI systems that reshape industries and redefine possibilities."
         />
         <Service services={aiServices} />
-        <Result />
+        {/* <Result /> */}
         <Workflow />
         <Faqs />
         <Interested />
@@ -110,4 +113,3 @@ const AIPage = () => {
 };
 
 export default AIPage;
-

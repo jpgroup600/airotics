@@ -13,25 +13,25 @@ const BlockchainPage = () => {
       title: "Blockchain Development",
       description:
         "Building decentralized applications and smart contracts using cutting-edge blockchain technologies that provide transparency, security and trust.",
-      image: "/services/services/web-dev.webp",
+      image: "/services/blockchain/service-1.jpg",
     },
     {
       title: "Smart Contract Solutions",
       description:
         "Creating secure and efficient smart contracts that automate processes and enable trustless transactions across various industries.",
-      image: "/services/services/creative-web-design.webp",
+      image: "/services/blockchain/service-2.jpg",
     },
     {
       title: "DeFi Platforms",
       description:
         "We develop decentralized finance solutions that deliver impact - not just enabling transactions, but revolutionizing financial systems.",
-      image: "/services/services/copywriting.webp",
+      image: "/services/blockchain/service-3.jpg",
     },
     {
       title: "NFT Marketplaces",
       description:
         "Use blockchain technology and innovation to your advantage, turning digital assets into valuable opportunities.",
-      image: "/services/services/e-commerce.webp",
+      image: "/services/blockchain/service-4.jpg",
     },
   ];
 
@@ -48,14 +48,14 @@ const BlockchainPage = () => {
               future.
             </>
           }
-          mainImageSrc="/home/logo.png"
+          mainImageSrc="/services/blockchain/hero-main.jpg"
           description="Transforming businesses with decentralized solutions and cutting-edge blockchain technology that drives innovation and trust."
-          bentoOneImg="/services/bento/0.webp"
-          bentoTwoImg="/services/bento/1.webp"
-          bentoThreeImg="/services/bento/3.webp"
-          bentoFourImg="/services/bento/2.webp"
-          bentoFiveImg="/services/bento/4.webp"
-           bentoSixImg="/services/bento/5.webp"
+          bentoOneImg="/services/blockchain/bento-0.jpg"
+          bentoTwoImg="/services/blockchain/bento-1.jpg"
+          bentoThreeImg="/services/blockchain/bento-2.jpg"
+          bentoFourImg="/services/blockchain/bento-3.jpg"
+          bentoFiveImg="/services/blockchain/bento-4.jpg"
+          bentoSixImg="/services/blockchain/bento-5.jpg"
           naviData={[
             "Blockchain",
             "Blockchain development",
@@ -69,7 +69,7 @@ const BlockchainPage = () => {
           description="Don't just adapt to change – lead the transformation, with powerful blockchain systems that reshape industries and redefine trust."
         />
         <Service services={blockchainServices} />
-        <Result />
+        {/* <Result /> */}
         <Workflow />
         <Faqs />
         <Interested />
@@ -79,4 +79,3 @@ const BlockchainPage = () => {
 };
 
 export default BlockchainPage;
-

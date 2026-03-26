@@ -76,7 +76,7 @@ const WebAndAppPage = () => {
           description="Don't just be noticed – become unmissable, with captivating web and mobile applications that stop people in their tracks."
         />
         <Service services={webAppServices} />
-        <Result />
+        {/* <Result /> */}
         <Workflow />
         <Faqs />
         <Interested />
