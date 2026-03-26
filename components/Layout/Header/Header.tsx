@@ -12,7 +12,10 @@ const DARK_THRESHOLD = 0.6;
 const SAMPLE_Y = 42;
 const EDGE_SAMPLE_X = 90;
 
-const LEFT_DARK_THEME = { logo: "brightness-0 invert", celebrationText: "text-white" };
+const LEFT_DARK_THEME = {
+  logo: "brightness-0 invert",
+  celebrationText: "text-white",
+};
 const LEFT_LIGHT_THEME = { logo: "", celebrationText: "text-black" };
 const RIGHT_DARK_THEME = {
   hireUsButton: "bg-white text-black hover:bg-black hover:text-white",
@@ -28,7 +31,9 @@ const RIGHT_LIGHT_THEME = {
 };
 
 const parseRgba = (value: string): Rgba | null => {
-  const match = value.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i);
+  const match = value.match(
+    /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i,
+  );
   if (!match) return null;
   return {
     r: Number(match[1]),
@@ -41,12 +46,18 @@ const parseRgba = (value: string): Rgba | null => {
 const luminance = ({ r, g, b }: Pick<Rgba, "r" | "g" | "b">) =>
   (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
 
-const isDark = (rgb: Pick<Rgba, "r" | "g" | "b">) => luminance(rgb) < DARK_THRESHOLD;
+const isDark = (rgb: Pick<Rgba, "r" | "g" | "b">) =>
+  luminance(rgb) < DARK_THRESHOLD;
 
-const getVideoSourcePoint = (video: HTMLVideoElement, sampleX: number, sampleY: number) => {
+const getVideoSourcePoint = (
+  video: HTMLVideoElement,
+  sampleX: number,
+  sampleY: number,
+) => {
   const viewportW = video.clientWidth || window.innerWidth;
   const viewportH = video.clientHeight || window.innerHeight;
-  if (!viewportW || !viewportH || !video.videoWidth || !video.videoHeight) return null;
+  if (!viewportW || !viewportH || !video.videoWidth || !video.videoHeight)
+    return null;
 
   const videoAspect = video.videoWidth / video.videoHeight;
   const viewportAspect = viewportW / viewportH;
@@ -133,11 +144,22 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const fixedBgVideo = document.querySelector("video.fixed") as HTMLVideoElement | null;
-    const sampleCanvas = Object.assign(document.createElement("canvas"), { width: 1, height: 1 });
-    const sampleContext = sampleCanvas.getContext("2d", { willReadFrequently: true });
+    const fixedBgVideo = document.querySelector(
+      "video.fixed",
+    ) as HTMLVideoElement | null;
+    const sampleCanvas = Object.assign(document.createElement("canvas"), {
+      width: 1,
+      height: 1,
+    });
+    const sampleContext = sampleCanvas.getContext("2d", {
+      willReadFrequently: true,
+    });
 
-    const detectVideoPointDarkness = (video: HTMLVideoElement, sampleX: number, sampleY: number) => {
+    const detectVideoPointDarkness = (
+      video: HTMLVideoElement,
+      sampleX: number,
+      sampleY: number,
+    ) => {
       if (!sampleContext || video.readyState < 2) return null;
       const point = getVideoSourcePoint(video, sampleX, sampleY);
       if (!point) return null;
@@ -152,7 +174,11 @@ const Header = () => {
       }
     };
 
-    const detectPointDarkness = (sampleX: number, sampleY: number, header: HTMLElement) => {
+    const detectPointDarkness = (
+      sampleX: number,
+      sampleY: number,
+      header: HTMLElement,
+    ) => {
       const stack = document.elementsFromPoint(sampleX, sampleY);
 
       for (const node of stack) {
@@ -160,7 +186,11 @@ const Header = () => {
         const element = node as HTMLElement;
 
         if (element.tagName === "VIDEO") {
-          const isDark = detectVideoPointDarkness(element as HTMLVideoElement, sampleX, sampleY);
+          const isDark = detectVideoPointDarkness(
+            element as HTMLVideoElement,
+            sampleX,
+            sampleY,
+          );
           if (isDark !== null) return isDark;
           continue;
         }
@@ -172,7 +202,8 @@ const Header = () => {
         return isDark(color);
       }
 
-      if (fixedBgVideo) return detectVideoPointDarkness(fixedBgVideo, sampleX, sampleY);
+      if (fixedBgVideo)
+        return detectVideoPointDarkness(fixedBgVideo, sampleX, sampleY);
       return null;
     };
 
@@ -182,11 +213,17 @@ const Header = () => {
 
       const leftSampleX = Math.min(EDGE_SAMPLE_X, window.innerWidth - 1);
       const rightSampleX = Math.max(window.innerWidth - EDGE_SAMPLE_X, 1);
-      const bodyColor = parseRgba(getComputedStyle(document.body).backgroundColor);
+      const bodyColor = parseRgba(
+        getComputedStyle(document.body).backgroundColor,
+      );
       const fallbackIsDark = bodyColor ? isDark(bodyColor) : false;
 
-      setIsLeftDarkBackground(detectPointDarkness(leftSampleX, SAMPLE_Y, header) ?? fallbackIsDark);
-      setIsRightDarkBackground(detectPointDarkness(rightSampleX, SAMPLE_Y, header) ?? fallbackIsDark);
+      setIsLeftDarkBackground(
+        detectPointDarkness(leftSampleX, SAMPLE_Y, header) ?? fallbackIsDark,
+      );
+      setIsRightDarkBackground(
+        detectPointDarkness(rightSampleX, SAMPLE_Y, header) ?? fallbackIsDark,
+      );
     };
 
     let rafId = 0;
@@ -209,8 +246,12 @@ const Header = () => {
     };
   }, [router.asPath]);
 
-  const leftThemeStyles = isLeftDarkBackground ? LEFT_DARK_THEME : LEFT_LIGHT_THEME;
-  const rightThemeStyles = isRightDarkBackground ? RIGHT_DARK_THEME : RIGHT_LIGHT_THEME;
+  const leftThemeStyles = isLeftDarkBackground
+    ? LEFT_DARK_THEME
+    : LEFT_LIGHT_THEME;
+  const rightThemeStyles = isRightDarkBackground
+    ? RIGHT_DARK_THEME
+    : RIGHT_LIGHT_THEME;
 
   return (
     <header
@@ -218,19 +259,18 @@ const Header = () => {
       className="fixed top-0 left-1/2 z-40 flex w-full max-w-[2450px] -translate-x-1/2 items-center justify-between p-6 lg:p-[26px]"
     >
       <div className="flex items-center justify-center gap-4">
-        <Link
-          href="/"
-          className="flex items-center justify-center"
-        >
+        <Link href="/" className="flex items-center justify-center">
           <Image
             src="/home/logo.png"
             alt="Logo"
             width={60}
             height={60}
-            className={`object-contain transition-all duration-300 lg:w-[80px] lg:h-[80px] ${leftThemeStyles.logo}`}
+            className={`object-contain transition-all duration-300 lg:h-[80px] lg:w-[80px] ${leftThemeStyles.logo}`}
           />
         </Link>
-        <p className={`hidden text-xs uppercase transition-colors lg:block ${leftThemeStyles.celebrationText}`}>
+        <p
+          className={`hidden text-xs uppercase transition-colors lg:block ${leftThemeStyles.celebrationText}`}
+        >
           Celebrating 5 years : 2020 - 2025
         </p>
       </div>
@@ -240,17 +280,22 @@ const Header = () => {
           className={`group hidden h-[52px] cursor-pointer items-center justify-center gap-4 rounded-full px-5 text-lg transition-all duration-300 lg:flex ${rightThemeStyles.hireUsButton}`}
         >
           Hire us{" "}
-
           <span className="inline-flex h-4 w-[18px] origin-center transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-[-45deg]">
-            <Arrow className={`transition-colors duration-300 ${rightThemeStyles.hireUsArrow}`} />
+            <Arrow
+              className={`transition-colors duration-300 ${rightThemeStyles.hireUsArrow}`}
+            />
           </span>
         </button>
         <button
           onClick={handleClick}
           className={`menu-btn relative z-20 h-[52px] w-[52px] cursor-pointer rounded-full border-2 transition-colors ${rightThemeStyles.menuButton}`}
         >
-          <span className={`menu-btn-line-1 absolute top-[calc(50%-3px)] left-1/2 block h-0.5 w-6 -translate-1/2 ${rightThemeStyles.menuLine}`}></span>
-          <span className={`menu-btn-line-2 absolute top-[calc(50%+3px)] left-1/2 block h-0.5 w-6 -translate-1/2 ${rightThemeStyles.menuLine}`}></span>
+          <span
+            className={`menu-btn-line-1 absolute top-[calc(50%-3px)] left-1/2 block h-0.5 w-6 -translate-1/2 ${rightThemeStyles.menuLine}`}
+          ></span>
+          <span
+            className={`menu-btn-line-2 absolute top-[calc(50%+3px)] left-1/2 block h-0.5 w-6 -translate-1/2 ${rightThemeStyles.menuLine}`}
+          ></span>
         </button>
       </div>
       <div
@@ -309,6 +354,15 @@ const Header = () => {
           >
             Our Work
           </Link>
+
+          <Link
+            onClick={handleMenuDisable}
+            className="menu-links mb-2 text-2xl text-black capitalize opacity-0"
+            href="/ai-automation"
+          >
+            AI automation
+          </Link>
+
           <Link
             onClick={handleMenuDisable}
             className="menu-links text-2xl text-black capitalize opacity-0"
@@ -318,10 +372,7 @@ const Header = () => {
           </Link>
         </div>
         <button className="menu-inside-btn mt-7 flex scale-0 cursor-pointer items-center justify-center gap-4 rounded-full border-2 border-black px-5 py-3.5">
-          <Link
-            onClick={handleMenuDisable}
-            href="/contact"
-          >
+          <Link onClick={handleMenuDisable} href="/contact">
             Start your projects{" "}
           </Link>
           <span className="h-3 w-3.5">
