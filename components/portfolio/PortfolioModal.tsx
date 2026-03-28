@@ -39,6 +39,8 @@ export default function PortfolioModal({
 }: PortfolioModalProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const didPushHistoryRef = useRef(false);
+  const closingFromPopRef = useRef(false);
 
   useEffect(() => {
     if (typeof document === "undefined" || !isOpen) return;
@@ -52,6 +54,18 @@ export default function PortfolioModal({
     document.body.dataset.modalOpen = "true";
     window.dispatchEvent(new CustomEvent("modal-state-change"));
 
+    if (!didPushHistoryRef.current) {
+      window.history.pushState({ modal: "ourwork" }, "", window.location.href);
+      didPushHistoryRef.current = true;
+    }
+
+    const onPopState = () => {
+      if (!isOpen) return;
+      closingFromPopRef.current = true;
+      onClose();
+    };
+    window.addEventListener("popstate", onPopState);
+
     return () => {
       document.body.style.overflow = previousBodyOverflow;
       document.documentElement.style.overflow = previousHtmlOverflow;
@@ -59,8 +73,14 @@ export default function PortfolioModal({
         delete document.body.dataset.modalOpen;
       else document.body.dataset.modalOpen = previousModalState;
       window.dispatchEvent(new CustomEvent("modal-state-change"));
+      window.removeEventListener("popstate", onPopState);
+      if (didPushHistoryRef.current && !closingFromPopRef.current) {
+        window.history.back();
+      }
+      didPushHistoryRef.current = false;
+      closingFromPopRef.current = false;
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -89,6 +109,13 @@ export default function PortfolioModal({
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 p-4 backdrop-blur-md lg:p-6"
       onClick={onClose}
     >
+      <button
+        onClick={onClose}
+        className="fixed top-4 right-4 z-[10001] rounded-full border border-white/20 bg-black/70 p-2 text-white/80 transition hover:bg-white/10 hover:text-white lg:hidden"
+        aria-label="Close modal"
+      >
+        <X className="h-5 w-5" />
+      </button>
       <div
         ref={panelRef}
         data-lenis-prevent
@@ -98,7 +125,7 @@ export default function PortfolioModal({
         <div className="relative border-b border-white/10 bg-white/[0.03] p-6 lg:p-8">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 rounded-full border border-white/20 p-2 text-white/80 transition hover:bg-white/10 hover:text-white"
+            className="absolute top-4 right-4 hidden rounded-full border border-white/20 p-2 text-white/80 transition hover:bg-white/10 hover:text-white lg:block"
             aria-label="Close modal"
           >
             <X className="h-5 w-5" />

@@ -34,6 +34,8 @@ export default function AIAutomationModal({
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const didPushHistoryRef = useRef(false);
+  const closingFromPopRef = useRef(false);
 
   useEffect(() => {
     if (typeof document === "undefined" || !isOpen) return;
@@ -45,6 +47,15 @@ export default function AIAutomationModal({
     document.documentElement.style.overflow = "hidden";
     document.body.dataset.modalOpen = "true";
     window.dispatchEvent(new CustomEvent("modal-state-change"));
+
+    if (!didPushHistoryRef.current) {
+      window.history.pushState(
+        { modal: "ai-automation" },
+        "",
+        window.location.href,
+      );
+      didPushHistoryRef.current = true;
+    }
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -69,7 +80,14 @@ export default function AIAutomationModal({
       }
     };
 
+    const onPopState = () => {
+      if (!isOpen) return;
+      closingFromPopRef.current = true;
+      onClose();
+    };
+
     window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("popstate", onPopState);
     requestAnimationFrame(() => closeButtonRef.current?.focus());
 
     return () => {
@@ -80,6 +98,12 @@ export default function AIAutomationModal({
       else document.body.dataset.modalOpen = previousModalState;
       window.dispatchEvent(new CustomEvent("modal-state-change"));
       window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("popstate", onPopState);
+      if (didPushHistoryRef.current && !closingFromPopRef.current) {
+        window.history.back();
+      }
+      didPushHistoryRef.current = false;
+      closingFromPopRef.current = false;
       previousFocusRef.current?.focus();
     };
   }, [isOpen, onClose]);
@@ -108,6 +132,13 @@ export default function AIAutomationModal({
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 p-4 backdrop-blur-md lg:p-6"
       onClick={onClose}
     >
+      <button
+        onClick={onClose}
+        className="fixed top-4 right-4 z-[10001] rounded-full border border-white/20 bg-black/70 p-2 text-white/80 transition hover:bg-white/10 hover:text-white lg:hidden"
+        aria-label="Close modal"
+      >
+        <X className="h-5 w-5" />
+      </button>
       <div
         ref={modalRef}
         data-lenis-prevent
@@ -121,7 +152,7 @@ export default function AIAutomationModal({
           <button
             ref={closeButtonRef}
             onClick={onClose}
-            className="absolute top-4 right-4 rounded-full border border-white/20 p-2 text-white/80 transition hover:bg-white/10 hover:text-white"
+            className="absolute top-4 right-4 hidden rounded-full border border-white/20 p-2 text-white/80 transition hover:bg-white/10 hover:text-white lg:block"
             aria-label="Close modal"
           >
             <X className="h-5 w-5" />
