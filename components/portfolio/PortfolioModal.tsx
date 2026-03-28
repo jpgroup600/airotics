@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 
@@ -37,6 +37,9 @@ export default function PortfolioModal({
   portfolioData,
   categories,
 }: PortfolioModalProps) {
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (typeof document === "undefined" || !isOpen) return;
 
@@ -59,6 +62,22 @@ export default function PortfolioModal({
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    overlayRef.current?.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 320,
+      easing: "ease-out",
+      fill: "both",
+    });
+    panelRef.current?.animate(
+      [
+        { opacity: 0, transform: "translateY(10px) scale(0.98)" },
+        { opacity: 1, transform: "translateY(0) scale(1)" },
+      ],
+      { duration: 380, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "both" },
+    );
+  }, [isOpen]);
+
   if (typeof document === "undefined" || !isOpen || selectedCase === null)
     return null;
 
@@ -66,10 +85,12 @@ export default function PortfolioModal({
 
   return createPortal(
     <div
+      ref={overlayRef}
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 p-4 backdrop-blur-md lg:p-6"
       onClick={onClose}
     >
       <div
+        ref={panelRef}
         data-lenis-prevent
         className="max-h-[90vh] w-full max-w-6xl overflow-y-auto rounded-3xl border border-white/20 bg-black/90 text-white shadow-2xl"
         onClick={(event) => event.stopPropagation()}

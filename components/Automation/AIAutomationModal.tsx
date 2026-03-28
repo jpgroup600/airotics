@@ -33,6 +33,7 @@ export default function AIAutomationModal({
   const modalRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof document === "undefined" || !isOpen) return;
@@ -83,10 +84,27 @@ export default function AIAutomationModal({
     };
   }, [isOpen, onClose]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    overlayRef.current?.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 320,
+      easing: "ease-out",
+      fill: "both",
+    });
+    modalRef.current?.animate(
+      [
+        { opacity: 0, transform: "translateY(10px) scale(0.98)" },
+        { opacity: 1, transform: "translateY(0) scale(1)" },
+      ],
+      { duration: 380, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "both" },
+    );
+  }, [isOpen]);
+
   if (typeof document === "undefined" || !isOpen || !selectedCase) return null;
 
   return createPortal(
     <div
+      ref={overlayRef}
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 p-4 backdrop-blur-md lg:p-6"
       onClick={onClose}
     >
