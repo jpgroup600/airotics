@@ -85,6 +85,7 @@ const Header = () => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isLeftDarkBackground, setIsLeftDarkBackground] = useState(false);
   const [isRightDarkBackground, setIsRightDarkBackground] = useState(false);
+  const [isGlobalModalOpen, setIsGlobalModalOpen] = useState(false);
 
   //animation
   const { contextSafe } = useGSAP(() => {}, { scope: container });
@@ -123,6 +124,7 @@ const Header = () => {
   });
 
   const handleClick = () => {
+    if (isGlobalModalOpen) return;
     isMenuActive ? handleMenuDisable() : handleMenuEnable();
   };
 
@@ -142,6 +144,20 @@ const Header = () => {
     handleMenuDisable();
     router.push("/contact");
   };
+
+  useEffect(() => {
+    const syncModalState = () => {
+      setIsGlobalModalOpen(document.body.dataset.modalOpen === "true");
+    };
+    syncModalState();
+    window.addEventListener("modal-state-change", syncModalState);
+    return () =>
+      window.removeEventListener("modal-state-change", syncModalState);
+  }, []);
+
+  useEffect(() => {
+    if (isGlobalModalOpen && isMenuActive) handleMenuDisable();
+  }, [isGlobalModalOpen, isMenuActive, handleMenuDisable]);
 
   useEffect(() => {
     const fixedBgVideo = document.querySelector(
@@ -256,7 +272,7 @@ const Header = () => {
   return (
     <header
       ref={container}
-      className="fixed top-0 left-1/2 z-40 flex w-full max-w-[2450px] -translate-x-1/2 items-center justify-between p-6 lg:p-[26px]"
+      className={`fixed top-0 left-1/2 z-40 flex w-full max-w-[2450px] -translate-x-1/2 items-center justify-between p-6 lg:p-[26px] ${isGlobalModalOpen ? "pointer-events-none opacity-0" : ""}`}
     >
       <div className="flex items-center justify-center gap-4">
         <Link href="/" className="flex items-center justify-center">
