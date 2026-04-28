@@ -13,7 +13,7 @@ const Approach = () => {
       </div>
       <Image
         className="col-span-5 mt-[5vw] aspect-square rounded-tl-[6rem] object-cover object-center lg:rounded-tl-[12.5rem]"
-        src="/agency/approach/approach.webp"
+        src="/agency/approach/approach.png"
         alt="image"
         width={1024}
         height={1024}

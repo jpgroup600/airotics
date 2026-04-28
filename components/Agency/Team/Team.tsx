@@ -1,15 +1,20 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { team } from "./data";
+import { team, executives } from "./data";
+import type { Executive } from "./data";
 import Image from "next/image";
 import { Controller, EffectCreative } from "swiper/modules";
 import { useState } from "react";
 import SW from "swiper";
 import "swiper/css/effect-creative";
 import "swiper/css";
+import ExecutiveModal from "./ExecutiveModal";
 
 const Team = () => {
   const [topSwiper, setTopSwiper] = useState<SW | null>(null);
   const [bottomSwiper, setBottomSwiper] = useState<SW | null>(null);
+  const [selectedExecutive, setSelectedExecutive] = useState<Executive | null>(
+    null,
+  );
 
   return (
     <div className="bg-black">
@@ -28,7 +33,49 @@ const Team = () => {
           </div>
         </section>
       </div>
-      <div className="relative block w-full">
+      <div className="mx-auto w-full max-w-[calc(1400px+15%)] px-[7.5%] pb-[5vw] 2xl:max-w-[1800px+15%]">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-6">
+          {executives.map((exec, index) => (
+            <button
+              key={index}
+              className="group flex cursor-pointer flex-col gap-3 text-left"
+              onClick={() => setSelectedExecutive(exec)}
+            >
+              <div
+                className="relative aspect-[3/4] w-full"
+                style={{ clipPath: "inset(0 round 0 3rem 0 0)" }}
+              >
+                <Image
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  src={exec.image}
+                  alt={exec.name}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/60" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="border-b border-white pb-1 text-base text-white lg:text-lg">
+                    Click to View
+                  </span>
+                </div>
+                <div className="absolute right-0 bottom-0 left-0 flex justify-center pb-4">
+                  <span className="rounded-sm bg-black/60 px-3 py-1 text-xs tracking-[0.3em] text-white/90 uppercase backdrop-blur-sm">
+                    {exec.post.split("").join(" ")}
+                  </span>
+                </div>
+              </div>
+              <p className="text-xl text-white lg:text-2xl xl:text-3xl">
+                {exec.name}
+              </p>
+            </button>
+          ))}
+        </div>
+      </div>
+      <ExecutiveModal
+        executive={selectedExecutive}
+        onClose={() => setSelectedExecutive(null)}
+      />
+      <div className="relative block w-full md:mt-32">
         <div className="absolute top-1/2 z-20 hidden h-fit w-full -translate-y-1/2 grid-cols-6 gap-2.5 lg:grid">
           <div className="relative col-span-2 col-start-4">
             <button
@@ -70,9 +117,12 @@ const Team = () => {
                 slidesPerView={1}
               >
                 {team.map((elem, index) => (
-                  <SwiperSlide className="group relative aspect-[3/4] w-full overflow-hidden" key={index}>
+                  <SwiperSlide
+                    className="group relative aspect-[3/4] w-full overflow-hidden"
+                    key={index}
+                  >
                     <Image
-                      className="cursor-pointer object-contain object-center transition-transform duration-500 group-hover:scale-105"
+                      className="cursor-pointer object-cover object-top transition-transform duration-500 group-hover:scale-80 scale-70"
                       src={elem.image}
                       alt="team-member-img"
                       fill
@@ -108,21 +158,28 @@ const Team = () => {
             },
           }}
         >
-          {team.map((elem, index) => (
-            <SwiperSlide className="relative aspect-[3/4] w-full overflow-hidden rounded-tr-[5rem]" key={index}>
-              <Image
-                className="object-contain object-center lg:brightness-50"
-                src={elem.image}
-                alt="team-member-img"
-                fill
-                sizes="(max-width: 768px) 80vw, 20vw"
-              />
-              <div className="absolute inset-0 flex h-full w-full flex-col justify-end bg-linear-to-b from-transparent from-70% to-black/80 px-5 py-3.5 text-white lg:hidden">
-                <h1 className="relative text-4xl">{elem.name}</h1>
-                <p className="relative text-xl">{elem.post}</p>
-              </div>
-            </SwiperSlide>
-          ))}
+          {team.map((elem, index) => {
+            index = index;
+            return (
+              <SwiperSlide
+                className="relative aspect-[3/4] w-full overflow-hidden rounded-tr-[5rem]"
+                key={index}
+              >
+                <Image
+                  className="object-cover object-top lg:brightness-50"
+                  src={elem.image}
+                  alt="team-member-img"
+                  fill
+                  sizes="(max-width: 768px) 80vw, 20vw"
+                />
+                <div className="absolute inset-0 flex h-full w-full flex-col justify-end bg-linear-to-b from-transparent from-70% to-black/80 px-5 py-3.5 text-white lg:hidden">
+                  <h1 className="relative text-4xl">{elem.name}</h1>
+                  <p className="relative text-xl">{elem.post}</p>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+    
         </Swiper>
       </div>
     </div>
