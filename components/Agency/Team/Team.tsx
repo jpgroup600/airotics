@@ -122,7 +122,7 @@ const Team = () => {
                     key={index}
                   >
                     <Image
-                      className="cursor-pointer object-cover object-top transition-transform duration-500 group-hover:scale-80 scale-70"
+                      className="scale-70 cursor-pointer object-cover object-top transition-transform duration-500 group-hover:scale-80"
                       src={elem.image}
                       alt="team-member-img"
                       fill
@@ -179,7 +179,6 @@ const Team = () => {
               </SwiperSlide>
             );
           })}
-    
         </Swiper>
       </div>
     </div>

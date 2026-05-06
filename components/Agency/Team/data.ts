@@ -45,13 +45,23 @@ export const executives: Executive[] = [
     name: "Jacob C",
     post: "COO",
     history: [
-      "Founder & Operator with hands-on engineering roots",                                                                                                            
-      "Led AI R&D consulting & delivery across multiple enterprise clients",                                                                                           
-      "Designed and shipped production-grade tax automation platforms",                                                                                                
-      "Bridges technical execution and business strategy as a builder-turned-operator",                                                                                
-      "Specializes in translating complex AI systems into scalable business solutions"
+      "Founder & Operator with hands-on engineering roots",
+      "Led AI R&D consulting & delivery across multiple enterprise clients",
+      "Designed and shipped production-grade tax automation platforms",
+      "Bridges technical execution and business strategy as a builder-turned-operator",
+      "Specializes in translating complex AI systems into scalable business solutions",
     ],
   },
+];
+
+export interface Advisor {
+  name: string;
+  company: string;
+}
+
+export const advisors: Advisor[] = [
+  { name: "Dr. Peter S.", company: "Samsung Aerospace" },
+  { name: "Zia Khan", company: "Former VP, Google" },
 ];
 
 export const team = [

@@ -1,3 +1,4 @@
+import Advisors from "@/components/Agency/Advisors/Advisors";
 import Approach from "@/components/Agency/Approach/Approach";
 import Award from "@/components/Agency/Award/Award";
 import Hero from "@/components/Agency/Hero/Hero";
@@ -9,9 +10,7 @@ import SEO from "@/components/Common/SEO";
 import { WebPageSchema } from "@/components/Common/StructuredData";
 import { SITE_URL } from "@/lib/seo";
 
-
 const AgencyPage = () => {
-
   return (
     <>
       <SEO
@@ -40,6 +39,7 @@ const AgencyPage = () => {
       <Partners />
       {/* <Award /> */}
       <Team />
+      <Advisors />
       <div className="bg-black lg:pt-[5vw]">
         <Interested />
       </div>
@@ -48,4 +48,3 @@ const AgencyPage = () => {
 };
 
 export default AgencyPage;
-
